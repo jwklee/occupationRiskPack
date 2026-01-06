@@ -1,6 +1,6 @@
 Package: occupationRiskPack
 Type: Package
-Title: Occupation-Level Risk Data for Labor Market Research
+Title: Occupation-Level Risk Data for Research
 Version: 0.1.0
 Authors@R: person(given = "Jaewook", family = "Lee", 
     role = c("aut", "cre"), 
