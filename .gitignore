@@ -1,0 +1,47 @@
+# R package build artifacts
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.tar.gz
+*.Rcheck/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Compiled files
+*.o
+*.so
+*.dll
+
+# Documentation
+/docs/
+/inst/doc/
+
+# Backup files
+*~
+*.bak
+*.backup
+*.tmp
+
+# IDE
+.idea/
+*.sublime-*
+
+# Test artifacts
+coverage/
+.coverage
+
+# Local development
+_backup/
+data-raw/sources/
+
+# Credentials (never commit)
+.Renviron
+.httr-oauth

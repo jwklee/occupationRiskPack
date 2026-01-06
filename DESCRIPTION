@@ -1,0 +1,33 @@
+Package: occupationRiskPack
+Type: Package
+Title: Occupation-Level Risk Data for Labor Market Research
+Version: 0.1.0
+Authors@R: person(given = "Jaewook", family = "Lee", 
+    role = c("aut", "cre"), 
+    email = "to.jaewook.lee@gmail.com",
+    comment = c(ORCID = "0000-0001-8405-8469"))
+Description: Provides standardized occupation-level risk measures for labor 
+    market research, including automation risk (routine task intensity), 
+    offshorability, skill specificity, AI exposure, computerization probability, 
+    environmental transition exposure (greenness/brownness), occupational prestige, 
+    and hazardous working conditions. Supports both ISCO-08 (International Standard 
+    Classification of Occupations) and SOC (Standard Occupational Classification) 
+    coding systems with crosswalks for bridging between classifications.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+LazyData: true
+Imports:
+    dplyr,
+    readr,
+    readxl,
+    stats
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+URL: https://github.com/jwklee/occupationRiskPack
+BugReports: https://github.com/jwklee/occupationRiskPack/issues
+RoxygenNote: 7.3.3
+VignetteBuilder: knitr

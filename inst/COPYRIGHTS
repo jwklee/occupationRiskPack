@@ -1,0 +1,217 @@
+COPYRIGHTS AND DATA SOURCE ATTRIBUTION
+======================================
+
+The occupationRiskPack package redistributes occupation-level data from 
+multiple sources for academic and research purposes. This file documents 
+the origin, licensing terms, and attribution requirements for each dataset.
+
+This package is distributed for NON-COMMERCIAL, ACADEMIC USE ONLY.
+
+================================================================================
+1. ROUTINE TASK INTENSITY (RTI) - Mihaylov & Tijdens (2019)
+================================================================================
+Loader: load_rti()
+File: inst/extdata/source_rti_mihaylov_2019.csv
+
+Source:
+  Mihaylov, E., & Tijdens, K. G. (2019). Measuring the Routine and Non-Routine 
+  Task Content of 427 Four-Digit ISCO-08 Occupations. Tinbergen Institute 
+  Discussion Paper 2019-035/V.
+  Available at: https://ssrn.com/abstract=3389681
+
+License: Academic working paper with open access. Free to use with citation.
+
+================================================================================
+2. COMPUTERIZATION PROBABILITY - Frey & Osborne (2017)
+================================================================================
+Loader: load_computerization()
+File: inst/extdata/source_computerization_frey_osborne.csv
+
+Source:
+  Frey, C. B., & Osborne, M. A. (2017). The future of employment: How 
+  susceptible are jobs to computerisation? Technological Forecasting and 
+  Social Change, 114, 254-280.
+  DOI: 10.1016/j.techfore.2016.08.019
+
+License: Supplementary data from peer-reviewed publication. Standard academic 
+use with citation permitted.
+
+================================================================================
+3. AI OCCUPATIONAL EXPOSURE (AIOE) - Felten, Raj, & Seamans (2021)
+================================================================================
+Loader: load_aioe()
+File: inst/extdata/source_aioe_felten.csv
+
+Source:
+  Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and 
+  geographic exposure to artificial intelligence: A novel dataset and its 
+  potential uses. Strategic Management Journal, 42(12), 2195-2217.
+  DOI: 10.1002/smj.3286
+
+License: Academic publication with publicly available data. Free to use with 
+citation for research purposes.
+
+================================================================================
+4. OFFSHORABILITY - Blinder (2007)
+================================================================================
+Loader: load_offshorability()
+File: inst/extdata/source_offshorability_blinder.csv
+
+Source:
+  Blinder, A. S. (2007). How Many U.S. Jobs Might Be Offshorable? CEPS Working 
+  Paper No. 142, Princeton University.
+  Available at: https://www.princeton.edu/~blinder/papers/07ceps142.pdf
+
+License: Academic working paper. Open access for research use with citation.
+
+================================================================================
+5. RTI & OFFSHORABILITY (Country-Year) - Mahutga et al. (2018)
+================================================================================
+Loader: load_mahutga()
+File: inst/extdata/source_rti_ofs_mahutga.csv
+
+Source:
+  Mahutga, M. C., Curran, M., & Roberts, A. (2018). Job tasks and the 
+  comparative structure of income and employment: Routine task intensity and 
+  offshorability for the LIS. International Journal of Comparative Sociology, 
+  59(2), 81-109.
+  DOI: https://doi.org/10.1177/0020715218765218
+
+License: Replication data from peer-reviewed journal article. Academic use 
+permitted with citation.
+
+================================================================================
+6. SKILL SPECIFICITY - Pardos-Prado & Xena (2019)
+================================================================================
+Loader: load_skill_specificity()
+File: inst/extdata/source_skill_specificity.csv
+
+Source:
+  Pardos-Prado, S., & Xena, C. (2019). Skill specificity and attitudes toward 
+  immigration. American Journal of Political Science, 63(2), 286-304.
+  DOI: https://doi.org/10.1111/ajps.12406
+
+License: Replication data from peer-reviewed journal. Academic use permitted 
+with citation per AJPS data availability policy.
+
+================================================================================
+7. GREENNESS & BROWNNESS - Cavallotti et al. (2025)
+================================================================================
+Loader: load_brownness()
+File: inst/extdata/source_greenness_brownness.csv
+
+Source:
+  Cavallotti, E., Colantone, I., Stanig, P., & Vona, F. (2025). Green collars 
+  at the voting booth: Material interest and environmental voting. Working Paper.
+  Available at: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5183183
+
+License: Data extracted from publicly available SSRN working paper appendix 
+tables. Academic use permitted with citation.
+
+================================================================================
+8. GREENNESS & BROWNNESS (OECD) - Scholl, Turban, & Gal (2023)
+================================================================================
+Loader: load_scholl_green_brown()
+File: inst/extdata/source_scholl_green_brown.csv
+
+Source:
+  Scholl, N., Turban, S., & Gal, P. N. (2023). The green side of productivity: 
+  An international classification of green and brown occupations. OECD 
+  Productivity Working Papers, No. 33, OECD Publishing.
+  DOI: 10.1787/a363530f-en
+
+License: OECD publications are available under the OECD Terms and Conditions
+(https://www.oecd.org/termsandconditions/). Non-commercial academic use with 
+attribution is permitted.
+
+================================================================================
+9. OCCUPATIONAL PRESTIGE - Hughes et al. (2024)
+================================================================================
+Loader: load_prestige()
+File: inst/extdata/source_prestige_hughes.csv
+
+Source:
+  Hughes, B. T., Srivastava, S., Leszko, M., & Condon, D. M. (2024). 
+  Occupational prestige: The status component of socioeconomic status. 
+  Collabra: Psychology, 10(1), 92882.
+  DOI: 10.1525/collabra.92882
+
+License: Open access journal article. Collabra: Psychology publishes under 
+Creative Commons Attribution License (4.0), permitting redistribution with 
+attribution.
+
+================================================================================
+10. EMPLOYMENT PROJECTIONS - U.S. Bureau of Labor Statistics
+================================================================================
+Loader: load_employment_projections()
+File: inst/extdata/source_bls_projections.csv
+
+Source:
+  U.S. Bureau of Labor Statistics. Employment Projections: 2024-34.
+  Available at: https://data.bls.gov/projections/occupationProj
+
+License: PUBLIC DOMAIN. U.S. Government works are not subject to copyright 
+protection (17 U.S.C. § 105). Free to use without restriction.
+
+================================================================================
+11. HAZARDOUS WORKING CONDITIONS - O*NET (U.S. Department of Labor)
+================================================================================
+Loader: load_hazard()
+File: inst/extdata/source_onet_hazard.csv
+
+Source:
+  U.S. Department of Labor, Employment and Training Administration. O*NET 
+  OnLine. Available at: https://www.onetonline.org/
+
+License: PUBLIC DOMAIN. O*NET is a public resource developed by the U.S. 
+Department of Labor. Free to use without restriction.
+
+================================================================================
+12. ISCO-08 CLASSIFICATION - International Labour Organization
+================================================================================
+Loaders: base_isco(), base_isco_detail(), crosswalk_isco_88_08()
+Files: inst/extdata/source_occup_risks.csv, source_isco_structure.csv, 
+       source_isco_crosswalk.csv
+
+Source:
+  International Labour Organization. (2012). International Standard 
+  Classification of Occupations: ISCO-08. Geneva: ILO.
+  Available at: https://www.ilo.org/public/english/bureau/stat/isco/isco08/
+
+License: ILO classification systems are freely available for use with 
+attribution. See ILO Terms of Use.
+
+================================================================================
+13. SOC 2018 CLASSIFICATION - U.S. Bureau of Labor Statistics
+================================================================================
+Loaders: base_soc(), crosswalk_soc_10_18(), crosswalk_isco_08_soc_10()
+Files: inst/extdata/source_soc_2018.csv, source_soc_crosswalk.csv
+
+Source:
+  U.S. Bureau of Labor Statistics. Standard Occupational Classification (SOC) 
+  System, 2018. Available at: https://www.bls.gov/soc/2018/
+
+License: PUBLIC DOMAIN. U.S. Government works are not subject to copyright 
+protection (17 U.S.C. § 105). Free to use without restriction.
+
+================================================================================
+GENERAL NOTES
+================================================================================
+
+1. All datasets are redistributed for NON-COMMERCIAL, ACADEMIC RESEARCH 
+   purposes only.
+
+2. Users of this package should cite the original data sources in any 
+   publications or presentations using these data.
+
+3. Each data loader function in the package displays source citation 
+   information when called.
+
+4. If you have questions about licensing or permissions for specific uses 
+   beyond academic research, please contact the original data providers.
+
+================================================================================
+Package License: MIT
+Package Author: Jaewook Lee
+Last Updated: 2026-01-06
+================================================================================

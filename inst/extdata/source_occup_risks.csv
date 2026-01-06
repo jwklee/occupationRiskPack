@@ -1,0 +1,428 @@
+isco08_title,isco08_code,oesch_class_num,oesch_class_chr16,oesch_class_chr8
+Legislators,1111,9,Higher-grade managers,(Associate) managers
+Senior government officials,1112,9,Higher-grade managers,(Associate) managers
+Traditional chiefs and heads of villages,1113,9,Higher-grade managers,(Associate) managers
+Senior officials of special-interest organizations,1114,9,Higher-grade managers,(Associate) managers
+Managing directors and chief executives,1120,9,Higher-grade managers,(Associate) managers
+Finance managers,1211,9,Higher-grade managers,(Associate) managers
+Human resource managers,1212,9,Higher-grade managers,(Associate) managers
+Policy and planning managers,1213,9,Higher-grade managers,(Associate) managers
+Business services and administration managers not elsewhere classified,1219,9,Higher-grade managers,(Associate) managers
+Sales and marketing managers,1221,9,Higher-grade managers,(Associate) managers
+Advertising and public relations managers,1222,9,Higher-grade managers,(Associate) managers
+Research and development managers,1223,9,Higher-grade managers,(Associate) managers
+Agricultural and forestry production managers,1311,10,Lower grade managers,(Associate) managers
+Aquaculture and fisheries production managers,1312,10,Lower grade managers,(Associate) managers
+Manufacturing managers,1321,9,Higher-grade managers,(Associate) managers
+Mining managers,1322,9,Higher-grade managers,(Associate) managers
+Construction managers,1323,9,Higher-grade managers,(Associate) managers
+"Supply, distribution and related managers",1324,9,Higher-grade managers,(Associate) managers
+Information and communications technology services managers,1330,9,Higher-grade managers,(Associate) managers
+Child care services managers,1341,9,Higher-grade managers,(Associate) managers
+Health services managers,1342,9,Higher-grade managers,(Associate) managers
+Aged care services managers,1343,9,Higher-grade managers,(Associate) managers
+Social welfare managers,1344,9,Higher-grade managers,(Associate) managers
+Education managers,1345,9,Higher-grade managers,(Associate) managers
+Financial and insurance services branch managers,1346,9,Higher-grade managers,(Associate) managers
+Professional services managers not elsewhere classified,1349,9,Higher-grade managers,(Associate) managers
+Hotel managers,1411,10,Lower grade managers,(Associate) managers
+Restaurant managers,1412,10,Lower grade managers,(Associate) managers
+Retail and wholesale trade managers,1420,10,Lower grade managers,(Associate) managers
+"Sports, recreation and cultural centre managers",1431,10,Lower grade managers,(Associate) managers
+Physicists and astronomers,2111,5,Technical experts,Technical (semi-) professionals
+Meteorologists,2112,5,Technical experts,Technical (semi-) professionals
+Chemists,2113,5,Technical experts,Technical (semi-) professionals
+Geologists and geophysicists,2114,5,Technical experts,Technical (semi-) professionals
+"Mathematicians, actuaries and statisticians",2120,5,Technical experts,Technical (semi-) professionals
+"Biologists, botanists, zoologists and related professionals",2131,5,Technical experts,Technical (semi-) professionals
+"Farming, forestry and fisheries advisers",2132,5,Technical experts,Technical (semi-) professionals
+Environmental protection professionals,2133,5,Technical experts,Technical (semi-) professionals
+Industrial and production engineers,2141,5,Technical experts,Technical (semi-) professionals
+Civil engineers,2142,5,Technical experts,Technical (semi-) professionals
+Environmental engineers,2143,5,Technical experts,Technical (semi-) professionals
+Mechanical engineers,2144,5,Technical experts,Technical (semi-) professionals
+Chemical engineers,2145,5,Technical experts,Technical (semi-) professionals
+"Mining engineers, metallurgists and related professionals",2146,5,Technical experts,Technical (semi-) professionals
+Engineering professionals not elsewhere classified,2149,5,Technical experts,Technical (semi-) professionals
+Electrical engineers,2151,5,Technical experts,Technical (semi-) professionals
+Electronics engineers,2152,5,Technical experts,Technical (semi-) professionals
+Telecommunications engineers,2153,5,Technical experts,Technical (semi-) professionals
+Building architects,2161,5,Technical experts,Technical (semi-) professionals
+Landscape architects,2162,5,Technical experts,Technical (semi-) professionals
+Product and garment designers,2163,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Town and traffic planners,2164,5,Technical experts,Technical (semi-) professionals
+Cartographers and surveyors,2165,5,Technical experts,Technical (semi-) professionals
+Graphic and multimedia designers,2166,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Generalist medical practitioners,2211,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Specialist medical practitioners,2212,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Nursing professionals,2221,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Midwifery professionals,2222,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Traditional and complementary medicine professionals,2230,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Paramedical practitioners,2240,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Veterinarians,2250,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Dentists,2261,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Pharmacists,2262,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Environmental and occupational health and hygiene professionals,2263,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Physiotherapists,2264,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Dieticians and nutritionists,2265,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Audiologists and speech therapists,2266,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Optometrists and ophthalmic opticians,2267,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Health professionals not elsewhere classified,2269,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+University and higher education teachers,2310,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Vocational education teachers,2320,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Secondary education teachers,2330,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Primary school teachers,2341,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Early childhood educators,2342,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Education methods specialists,2351,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Special needs teachers,2352,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Other language teachers,2353,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Other music teachers,2354,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Other arts teachers,2355,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Information technology trainers,2356,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Teaching professionals not elsewhere classified,2359,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Accountants,2411,9,Higher-grade managers,(Associate) managers
+Financial and investment advisers,2412,9,Higher-grade managers,(Associate) managers
+Financial analysts,2413,9,Higher-grade managers,(Associate) managers
+Management and organization analysts,2421,9,Higher-grade managers,(Associate) managers
+Policy administration professionals,2422,9,Higher-grade managers,(Associate) managers
+Personnel and careers professionals,2423,9,Higher-grade managers,(Associate) managers
+Training and staff development professionals,2424,9,Higher-grade managers,(Associate) managers
+Advertising and marketing professionals,2431,9,Higher-grade managers,(Associate) managers
+Public relations professionals,2432,9,Higher-grade managers,(Associate) managers
+Technical and medical sales professionals (excluding ICT),2433,10,Lower grade managers,(Associate) managers
+Information and communications technology sales professionals,2434,10,Lower grade managers,(Associate) managers
+Systems analysts,2511,5,Technical experts,Technical (semi-) professionals
+Software developers,2512,5,Technical experts,Technical (semi-) professionals
+Web and multimedia developers,2513,5,Technical experts,Technical (semi-) professionals
+Applications programmers,2514,5,Technical experts,Technical (semi-) professionals
+Software and applications developers and analysts not elsewhere classified,2519,5,Technical experts,Technical (semi-) professionals
+Database designers and administrators,2521,5,Technical experts,Technical (semi-) professionals
+Systems administrators,2522,5,Technical experts,Technical (semi-) professionals
+Computer network professionals,2523,5,Technical experts,Technical (semi-) professionals
+Database and network professionals not elsewhere classified,2529,5,Technical experts,Technical (semi-) professionals
+Lawyers,2611,9,Higher-grade managers,(Associate) managers
+Judges,2612,9,Higher-grade managers,(Associate) managers
+Legal professionals not elsewhere classified,2619,9,Higher-grade managers,(Associate) managers
+Archivists and curators,2621,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Librarians and related information professionals,2622,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Economists,2631,9,Higher-grade managers,(Associate) managers
+"Sociologists, anthropologists and related professionals",2632,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+"Philosophers, historians and political scientists",2633,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Psychologists,2634,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Social work and counselling professionals,2635,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Religious professionals,2636,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Authors and related writers,2641,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Journalists,2642,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+"Translators, interpreters and other linguists",2643,13,Socio-cultural professionals,Socio-cultural (semi-)professionals
+Visual artists,2651,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+"Musicians, singers and composers",2652,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Dancers and choreographers,2653,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+"Film, stage and related directors and producers",2654,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Actors,2655,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+"Announcers on radio, television and other media",2656,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Creative and performing artists not elsewhere classified,2659,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Chemical and physical science technicians,3111,6,Technicians,Technical (semi-) professionals
+Civil engineering technicians,3112,6,Technicians,Technical (semi-) professionals
+Electrical engineering technicians,3113,6,Technicians,Technical (semi-) professionals
+Electronics engineering technicians,3114,6,Technicians,Technical (semi-) professionals
+Mechanical engineering technicians,3115,6,Technicians,Technical (semi-) professionals
+Chemical engineering technicians,3116,6,Technicians,Technical (semi-) professionals
+Mining and metallurgical technicians,3117,6,Technicians,Technical (semi-) professionals
+Draughtspersons,3118,6,Technicians,Technical (semi-) professionals
+Physical and engineering science technicians not elsewhere classified,3119,6,Technicians,Technical (semi-) professionals
+Mining supervisors,3121,6,Technicians,Technical (semi-) professionals
+Manufacturing supervisors,3122,6,Technicians,Technical (semi-) professionals
+Construction supervisors,3123,6,Technicians,Technical (semi-) professionals
+Power production plant operators,3131,6,Technicians,Technical (semi-) professionals
+Incinerator and water treatment plant operators,3132,6,Technicians,Technical (semi-) professionals
+Chemical processing plant controllers,3133,6,Technicians,Technical (semi-) professionals
+Petroleum and natural gas refining plant operators,3134,6,Technicians,Technical (semi-) professionals
+Metal production process controllers,3135,6,Technicians,Technical (semi-) professionals
+Life science technicians (excluding medical),3141,6,Technicians,Technical (semi-) professionals
+Agricultural technicians,3142,6,Technicians,Technical (semi-) professionals
+Forestry technicians,3143,6,Technicians,Technical (semi-) professionals
+Ships' engineers,3151,6,Technicians,Technical (semi-) professionals
+Ships' deck officers and pilots,3152,6,Technicians,Technical (semi-) professionals
+Aircraft pilots and related associate professionals,3153,6,Technicians,Technical (semi-) professionals
+Air traffic controllers,3154,6,Technicians,Technical (semi-) professionals
+Air traffic safety electronics technicians,3155,6,Technicians,Technical (semi-) professionals
+Medical imaging and therapeutic equipment technicians,3211,6,Technicians,Technical (semi-) professionals
+Medical and pathology laboratory technicians,3212,6,Technicians,Technical (semi-) professionals
+Pharmaceutical technicians and assistants,3213,6,Technicians,Technical (semi-) professionals
+Medical and dental prosthetic technicians,3214,6,Technicians,Technical (semi-) professionals
+Nursing associate professionals,3221,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Midwifery associate professionals,3222,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Traditional and complementary medicine associate professionals,3230,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Veterinary technicians and assistants,3240,15,Skilled service workers,Service workers
+Dental assistants and therapists,3251,15,Skilled service workers,Service workers
+Medical records and health information technicians,3252,6,Technicians,Technical (semi-) professionals
+Community health workers,3253,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Dispensing opticians,3254,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Physiotherapy technicians and assistants,3255,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Medical assistants,3256,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Environmental and occupational health inspectors and associates,3257,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Ambulance workers,3258,15,Skilled service workers,Service workers
+Health associate professionals not elsewhere classified,3259,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Securities and finance dealers and brokers,3311,10,Lower grade managers,(Associate) managers
+Credit and loans officers,3312,10,Lower grade managers,(Associate) managers
+Accounting associate professionals,3313,10,Lower grade managers,(Associate) managers
+"Statistical, mathematical and related associate professionals",3314,10,Lower grade managers,(Associate) managers
+Valuers and loss assessors,3315,10,Lower grade managers,(Associate) managers
+Insurance representatives,3321,10,Lower grade managers,(Associate) managers
+Commercial sales representatives,3322,10,Lower grade managers,(Associate) managers
+Buyers,3323,10,Lower grade managers,(Associate) managers
+Trade brokers,3324,10,Lower grade managers,(Associate) managers
+Clearing and forwarding agents,3331,10,Lower grade managers,(Associate) managers
+Conference and event planners,3332,10,Lower grade managers,(Associate) managers
+Employment agents and contractors,3333,10,Lower grade managers,(Associate) managers
+Real estate agents and property managers,3334,10,Lower grade managers,(Associate) managers
+Business services agents not elsewhere classified,3339,10,Lower grade managers,(Associate) managers
+Office supervisors,3341,11,Skilled clerks,Clerks
+Legal secretaries,3342,11,Skilled clerks,Clerks
+Administrative and executive secretaries,3343,10,Lower grade managers,(Associate) managers
+Medical secretaries,3344,11,Skilled clerks,Clerks
+Customs and border inspectors,3351,10,Lower grade managers,(Associate) managers
+Government tax and excise officials,3352,10,Lower grade managers,(Associate) managers
+Government social benefits officials,3353,10,Lower grade managers,(Associate) managers
+Government licensing officials,3354,10,Lower grade managers,(Associate) managers
+Police inspectors and detectives,3355,10,Lower grade managers,(Associate) managers
+Government regulatory associate professionals not elsewhere classified,3359,10,Lower grade managers,(Associate) managers
+Legal and related associate professionals,3411,10,Lower grade managers,(Associate) managers
+Social work associate professionals,3412,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Religious associate professionals,3413,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Athletes and sports players,3421,15,Skilled service workers,Service workers
+"Sports coaches, instructors and officials",3422,15,Skilled service workers,Service workers
+Fitness and recreation instructors and program leaders,3423,15,Skilled service workers,Service workers
+Photographers,3431,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Interior designers and decorators,3432,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+"Gallery, museum and library technicians",3433,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Chefs,3434,15,Skilled service workers,Service workers
+Information and communications technology operations technicians,3511,6,Technicians,Technical (semi-) professionals
+Information and communications technology user support technicians,3512,6,Technicians,Technical (semi-) professionals
+Computer network and systems technicians,3513,6,Technicians,Technical (semi-) professionals
+Web technicians,3514,6,Technicians,Technical (semi-) professionals
+Broadcasting and audiovisual technicians,3521,6,Technicians,Technical (semi-) professionals
+Telecommunications engineering technicians,3522,6,Technicians,Technical (semi-) professionals
+General office clerks,4110,11,Skilled clerks,Clerks
+Secretaries (general),4120,11,Skilled clerks,Clerks
+Typists and word processing operators,4131,11,Skilled clerks,Clerks
+Data entry clerks,4132,12,Low-skilled clerks,Clerks
+Bank tellers and related clerks,4211,11,Skilled clerks,Clerks
+"Bookmakers, croupiers and related gaming workers",4212,11,Skilled clerks,Clerks
+Pawnbrokers and money-lenders,4213,11,Skilled clerks,Clerks
+Debt collectors and related workers,4214,11,Skilled clerks,Clerks
+Travel consultants and clerks,4221,11,Skilled clerks,Clerks
+Contact centre information clerks,4222,12,Low-skilled clerks,Clerks
+Telephone switchboard operators,4223,12,Low-skilled clerks,Clerks
+Hotel receptionists,4224,11,Skilled clerks,Clerks
+Inquiry clerks,4225,11,Skilled clerks,Clerks
+Receptionists (general),4226,11,Skilled clerks,Clerks
+Survey and market research interviewers,4227,11,Skilled clerks,Clerks
+Client information workers not elsewhere classified,4229,11,Skilled clerks,Clerks
+Accounting and bookkeeping clerks,4311,11,Skilled clerks,Clerks
+"Statistical, finance and insurance clerks",4312,11,Skilled clerks,Clerks
+Payroll clerks,4313,11,Skilled clerks,Clerks
+Stock clerks,4321,11,Skilled clerks,Clerks
+Production clerks,4322,11,Skilled clerks,Clerks
+Transport clerks,4323,11,Skilled clerks,Clerks
+Library clerks,4411,11,Skilled clerks,Clerks
+Mail carriers and sorting clerks,4412,11,Skilled clerks,Clerks
+"Coding, proofreading and related clerks",4413,11,Skilled clerks,Clerks
+Scribes and related workers,4414,14,Socio-cultural semi-professionals,Socio-cultural (semi-)professionals
+Filing and copying clerks,4415,11,Skilled clerks,Clerks
+Personnel clerks,4416,11,Skilled clerks,Clerks
+Clerical support workers not elsewhere classified,4419,11,Skilled clerks,Clerks
+Travel attendants and travel stewards,5111,15,Skilled service workers,Service workers
+Transport conductors,5112,15,Skilled service workers,Service workers
+Travel guides,5113,15,Skilled service workers,Service workers
+Cooks,5120,15,Skilled service workers,Service workers
+Waiters,5131,16,Low-skilled service workers,Service workers
+Bartenders,5132,16,Low-skilled service workers,Service workers
+Hairdressers,5141,15,Skilled service workers,Service workers
+Beauticians and related workers,5142,15,Skilled service workers,Service workers
+"Cleaning and housekeeping supervisors in offices, hotels and other establishments",5151,16,Low-skilled service workers,Service workers
+Domestic housekeepers,5152,16,Low-skilled service workers,Service workers
+Building caretakers,5153,16,Low-skilled service workers,Service workers
+"Astrologers, fortune-tellers and related workers",5161,16,Low-skilled service workers,Service workers
+Companions and valets,5162,16,Low-skilled service workers,Service workers
+Undertakers and embalmers,5163,15,Skilled service workers,Service workers
+Pet groomers and animal care workers,5164,16,Low-skilled service workers,Service workers
+Driving instructors,5165,15,Skilled service workers,Service workers
+Personal services workers not elsewhere classified,5169,16,Low-skilled service workers,Service workers
+Stall and market salespersons,5211,16,Low-skilled service workers,Service workers
+Street food salespersons,5212,16,Low-skilled service workers,Service workers
+Shopkeepers,5221,10,Lower grade managers,(Associate) managers
+Shop supervisors,5222,15,Skilled service workers,Service workers
+Shop sales assistants,5223,15,Skilled service workers,Service workers
+Cashiers and ticket clerks,5230,12,Low-skilled clerks,Clerks
+Fashion and other models,5241,15,Skilled service workers,Service workers
+Sales demonstrators,5242,15,Skilled service workers,Service workers
+Door-to-door salespersons,5243,16,Low-skilled service workers,Service workers
+Contact centre salespersons,5244,16,Low-skilled service workers,Service workers
+Service station attendants,5245,16,Low-skilled service workers,Service workers
+Food service counter attendants,5246,16,Low-skilled service workers,Service workers
+Child care workers,5311,15,Skilled service workers,Service workers
+Teachers' aides,5312,15,Skilled service workers,Service workers
+Health care assistants,5321,15,Skilled service workers,Service workers
+Home-based personal care workers,5322,16,Low-skilled service workers,Service workers
+Personal care workers in health services not elsewhere classified,5329,16,Low-skilled service workers,Service workers
+Firefighters,5411,15,Skilled service workers,Service workers
+Police officers,5412,15,Skilled service workers,Service workers
+Prison guards,5413,15,Skilled service workers,Service workers
+Security guards,5414,16,Low-skilled service workers,Service workers
+Protective services workers not elsewhere classified,5419,15,Skilled service workers,Service workers
+Field crop and vegetable growers,6111,7,Skilled crafts workers,Production workers
+Tree and shrub crop growers,6112,7,Skilled crafts workers,Production workers
+"Gardeners, horticultural and nursery growers",6113,7,Skilled crafts workers,Production workers
+Mixed crop growers,6114,7,Skilled crafts workers,Production workers
+Livestock and dairy producers,6121,7,Skilled crafts workers,Production workers
+Poultry producers,6122,7,Skilled crafts workers,Production workers
+Apiarists and sericulturists,6123,7,Skilled crafts workers,Production workers
+Animal producers not elsewhere classified,6129,7,Skilled crafts workers,Production workers
+Mixed crop and animal producers,6130,7,Skilled crafts workers,Production workers
+Forestry and related workers,6210,7,Skilled crafts workers,Production workers
+Aquaculture workers,6221,7,Skilled crafts workers,Production workers
+Inland and coastal waters fishery workers,6222,7,Skilled crafts workers,Production workers
+Deep-sea fishery workers,6223,7,Skilled crafts workers,Production workers
+Hunters and trappers,6224,7,Skilled crafts workers,Production workers
+Subsistence crop farmers,6310,7,Skilled crafts workers,Production workers
+Subsistence livestock farmers,6320,7,Skilled crafts workers,Production workers
+Subsistence mixed crop and livestock farmers,6330,7,Skilled crafts workers,Production workers
+"Subsistence fishers, hunters, trappers and gatherers",6340,7,Skilled crafts workers,Production workers
+House builders,7111,7,Skilled crafts workers,Production workers
+Bricklayers and related workers,7112,7,Skilled crafts workers,Production workers
+"Stonemasons, stone cutters, splitters and carvers",7113,7,Skilled crafts workers,Production workers
+"Concrete placers, concrete finishers and related workers",7114,7,Skilled crafts workers,Production workers
+Carpenters and joiners,7115,7,Skilled crafts workers,Production workers
+Building frame and related trades workers not elsewhere classified,7119,7,Skilled crafts workers,Production workers
+Roofers,7121,7,Skilled crafts workers,Production workers
+Floor layers and tile setters,7122,7,Skilled crafts workers,Production workers
+Plasterers,7123,7,Skilled crafts workers,Production workers
+Insulation workers,7124,7,Skilled crafts workers,Production workers
+Glaziers,7125,7,Skilled crafts workers,Production workers
+Plumbers and pipe fitters,7126,7,Skilled crafts workers,Production workers
+Air conditioning and refrigeration mechanics,7127,7,Skilled crafts workers,Production workers
+Painters and related workers,7131,7,Skilled crafts workers,Production workers
+Spray painters and varnishers,7132,7,Skilled crafts workers,Production workers
+Building structure cleaners,7133,7,Skilled crafts workers,Production workers
+Metal moulders and coremakers,7211,7,Skilled crafts workers,Production workers
+Welders and flame cutters,7212,7,Skilled crafts workers,Production workers
+Sheet metal workers,7213,7,Skilled crafts workers,Production workers
+Structural metal preparers and erectors,7214,7,Skilled crafts workers,Production workers
+Riggers and cable splicers,7215,7,Skilled crafts workers,Production workers
+"Blacksmiths, hammersmiths and forging press workers",7221,7,Skilled crafts workers,Production workers
+Toolmakers and related workers,7222,7,Skilled crafts workers,Production workers
+Metal working machine tool setters and operators,7223,7,Skilled crafts workers,Production workers
+"Metal polishers, wheel grinders and tool sharpeners",7224,7,Skilled crafts workers,Production workers
+Motor vehicle mechanics and repairers,7231,7,Skilled crafts workers,Production workers
+Aircraft engine mechanics and repairers,7232,7,Skilled crafts workers,Production workers
+Agricultural and industrial machinery mechanics and repairers,7233,7,Skilled crafts workers,Production workers
+Bicycle and related repairers,7234,7,Skilled crafts workers,Production workers
+Precision-instrument makers and repairers,7311,7,Skilled crafts workers,Production workers
+Musical instrument makers and tuners,7312,7,Skilled crafts workers,Production workers
+Jewellery and precious metal workers,7313,7,Skilled crafts workers,Production workers
+Potters and related workers,7314,7,Skilled crafts workers,Production workers
+"Glass makers, cutters, grinders and finishers",7315,7,Skilled crafts workers,Production workers
+"Signwriters, decorative painters, engravers and etchers",7316,7,Skilled crafts workers,Production workers
+"Handicraft workers in wood, basketry and related materials",7317,7,Skilled crafts workers,Production workers
+"Handicraft workers in textile, leather and related materials",7318,7,Skilled crafts workers,Production workers
+Pre-press technicians,7321,7,Skilled crafts workers,Production workers
+Printers,7322,7,Skilled crafts workers,Production workers
+Print finishing and binding workers,7323,7,Skilled crafts workers,Production workers
+Building and related electricians,7411,7,Skilled crafts workers,Production workers
+Electrical mechanics and fitters,7412,7,Skilled crafts workers,Production workers
+Electrical line installers and repairers,7413,7,Skilled crafts workers,Production workers
+Electronics mechanics and servicers,7421,7,Skilled crafts workers,Production workers
+Information and communications technology installers and servicers,7422,7,Skilled crafts workers,Production workers
+"Butchers, fishmongers and related food preparers",7511,7,Skilled crafts workers,Production workers
+"Bakers, pastry-cooks and confectionery makers",7512,7,Skilled crafts workers,Production workers
+Dairy products makers,7513,7,Skilled crafts workers,Production workers
+"Fruit, vegetable and related preservers",7514,7,Skilled crafts workers,Production workers
+Food and beverage tasters and graders,7515,7,Skilled crafts workers,Production workers
+Tobacco preparers and tobacco products makers,7516,7,Skilled crafts workers,Production workers
+Wood treaters,7521,7,Skilled crafts workers,Production workers
+Cabinet-makers and related workers,7522,7,Skilled crafts workers,Production workers
+Woodworking machine tool setters and operators,7523,7,Skilled crafts workers,Production workers
+"Tailors, dressmakers, furriers and hatters",7531,7,Skilled crafts workers,Production workers
+Garment and related patternmakers and cutters,7532,7,Skilled crafts workers,Production workers
+"Sewing, embroidery and related workers",7533,7,Skilled crafts workers,Production workers
+Upholsterers and related workers,7534,7,Skilled crafts workers,Production workers
+"Pelt dressers, tanners and fellmongers",7535,7,Skilled crafts workers,Production workers
+Shoemakers and related workers,7536,7,Skilled crafts workers,Production workers
+Underwater divers,7541,7,Skilled crafts workers,Production workers
+Shotfirers and blasters,7542,7,Skilled crafts workers,Production workers
+Product graders and testers (excluding foods and beverages),7543,7,Skilled crafts workers,Production workers
+Fumigators and other pest and weed controllers,7544,7,Skilled crafts workers,Production workers
+Craft and related workers not elsewhere classified,7549,7,Skilled crafts workers,Production workers
+Miners and quarriers,8111,8,Low-skilled production workers,Production workers
+Mineral and stone processing plant operators,8112,8,Low-skilled production workers,Production workers
+Well drillers and borers and related workers,8113,8,Low-skilled production workers,Production workers
+"Cement, stone and other mineral products machine operators",8114,8,Low-skilled production workers,Production workers
+Metal processing plant operators,8121,8,Low-skilled production workers,Production workers
+"Metal finishing, plating and coating machine operators",8122,8,Low-skilled production workers,Production workers
+Chemical products plant and machine operators,8131,8,Low-skilled production workers,Production workers
+Photographic products machine operators,8132,8,Low-skilled production workers,Production workers
+Rubber products machine operators,8141,8,Low-skilled production workers,Production workers
+Plastic products machine operators,8142,8,Low-skilled production workers,Production workers
+Paper products machine operators,8143,8,Low-skilled production workers,Production workers
+"Fibre preparing, spinning and winding machine operators",8151,8,Low-skilled production workers,Production workers
+Weaving and knitting machine operators,8152,8,Low-skilled production workers,Production workers
+Sewing machine operators,8153,8,Low-skilled production workers,Production workers
+"Bleaching, dyeing and fabric cleaning machine operators",8154,8,Low-skilled production workers,Production workers
+Fur and leather preparing machine operators,8155,8,Low-skilled production workers,Production workers
+Shoemaking and related machine operators,8156,8,Low-skilled production workers,Production workers
+Laundry machine operators,8157,8,Low-skilled production workers,Production workers
+"Textile, fur and leather products machine operators not elsewhere classified",8159,8,Low-skilled production workers,Production workers
+Food and related products machine operators,8160,8,Low-skilled production workers,Production workers
+Pulp and papermaking plant operators,8171,8,Low-skilled production workers,Production workers
+Wood processing plant operators,8172,8,Low-skilled production workers,Production workers
+Glass and ceramics plant operators,8181,8,Low-skilled production workers,Production workers
+Steam engine and boiler operators,8182,8,Low-skilled production workers,Production workers
+"Packing, bottling and labelling machine operators",8183,8,Low-skilled production workers,Production workers
+Mechanical machinery assemblers,8211,8,Low-skilled production workers,Production workers
+Electrical and electronic equipment assemblers,8212,8,Low-skilled production workers,Production workers
+Assemblers not elsewhere classified,8219,8,Low-skilled production workers,Production workers
+Locomotive engine drivers,8311,7,Skilled crafts workers,Production workers
+"Railway brake, signal and switch operators",8312,7,Skilled crafts workers,Production workers
+Motorcycle drivers,8321,8,Low-skilled production workers,Production workers
+"Car, taxi and van drivers",8322,16,Low-skilled service workers,Service workers
+Bus and tram drivers,8331,15,Skilled service workers,Service workers
+Heavy truck and lorry drivers,8332,7,Skilled crafts workers,Production workers
+Mobile farm and forestry plant operators,8341,8,Low-skilled production workers,Production workers
+Earthmoving and related plant operators,8342,7,Skilled crafts workers,Production workers
+"Crane, hoist and related plant operators",8343,7,Skilled crafts workers,Production workers
+Lifting truck operators,8344,7,Skilled crafts workers,Production workers
+Ships' deck crews and related workers,8350,8,Low-skilled production workers,Production workers
+Domestic cleaners and helpers,9111,16,Low-skilled service workers,Service workers
+"Cleaners and helpers in offices, hotels and other establishments",9112,16,Low-skilled service workers,Service workers
+Hand launderers and pressers,9121,16,Low-skilled service workers,Service workers
+Vehicle cleaners,9122,16,Low-skilled service workers,Service workers
+Window cleaners,9123,16,Low-skilled service workers,Service workers
+Other cleaning workers,9129,16,Low-skilled service workers,Service workers
+Crop farm labourers,9211,8,Low-skilled production workers,Production workers
+Livestock farm labourers,9212,8,Low-skilled production workers,Production workers
+Mixed crop and livestock farm labourers,9213,8,Low-skilled production workers,Production workers
+Garden and horticultural labourers,9214,8,Low-skilled production workers,Production workers
+Forestry labourers,9215,8,Low-skilled production workers,Production workers
+Fishery and aquaculture labourers,9216,8,Low-skilled production workers,Production workers
+Mining and quarrying labourers,9311,8,Low-skilled production workers,Production workers
+Civil engineering labourers,9312,8,Low-skilled production workers,Production workers
+Building construction labourers,9313,8,Low-skilled production workers,Production workers
+Hand packers,9321,8,Low-skilled production workers,Production workers
+Manufacturing labourers not elsewhere classified,9329,8,Low-skilled production workers,Production workers
+Hand and pedal vehicle drivers,9331,8,Low-skilled production workers,Production workers
+Drivers of animal-drawn vehicles and machinery,9332,8,Low-skilled production workers,Production workers
+Freight handlers,9333,8,Low-skilled production workers,Production workers
+Shelf fillers,9334,8,Low-skilled production workers,Production workers
+Fast food preparers,9411,16,Low-skilled service workers,Service workers
+Kitchen helpers,9412,16,Low-skilled service workers,Service workers
+Street and related services workers,9510,16,Low-skilled service workers,Service workers
+Street vendors (excluding food),9520,16,Low-skilled service workers,Service workers
+Garbage and recycling collectors,9611,8,Low-skilled production workers,Production workers
+Refuse sorters,9612,8,Low-skilled production workers,Production workers
+Sweepers and related labourers,9613,8,Low-skilled production workers,Production workers
+"Messengers, package deliverers and luggage porters",9621,12,Low-skilled clerks,Clerks
+Odd-job persons,9622,8,Low-skilled production workers,Production workers
+Meter readers and vending-machine collectors,9623,8,Low-skilled production workers,Production workers
+Water and firewood collectors,9624,8,Low-skilled production workers,Production workers
+Elementary workers not elsewhere classified,9629,8,Low-skilled production workers,Production workers

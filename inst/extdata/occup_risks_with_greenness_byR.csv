@@ -1,0 +1,428 @@
+description,isco_08_4dg,rti_mihaylov_2019,isco_08_3dg,isco_08_2dg,isco08_title,greenness,brownness,brown_dummy,greenness_original,brownness_original,greenness_source,greenness_imputed,brownness_source,brownness_imputed,brown_dummy_source
+Legislators,1111,-1,111,11,NA,0.10382785,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Senior government officials,1112,-1,111,11,Senior government officials,0.0377963,0,0,0.0377963,0,observed,FALSE,observed,FALSE,observed
+Traditional chiefs and heads of villages,1113,-1,111,11,NA,0.10382785,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Senior officials of special-interest organizations,1114,-1,111,11,Senior officials of special-interest organizations,0.1698594,0,0,0.1698594,0,observed,FALSE,observed,FALSE,observed
+Managing directors and chief executives,1120,-1,112,11,NA,0.10382785,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Finance managers,1211,-1,121,12,NA,0.23111054999999997,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Human resource managers,1212,-0.8666667,121,12,NA,0.23111054999999997,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Policy and planning managers,1213,-1,121,12,Policy and planning managers,0.39618949999999997,0,0,0.39618949999999997,0,observed,FALSE,observed,FALSE,observed
+Business services and administration managers not elsewhere classified,1219,-1,121,12,Business services and administration managers n.e.c.,0.0660316,0,0,0.0660316,0,observed,FALSE,observed,FALSE,observed
+Sales and marketing managers,1221,-1,122,12,Sales and marketing managers,0.0860184,0,0,0.0860184,0,observed,FALSE,observed,FALSE,observed
+Advertising and public relations managers,1222,-1,122,12,NA,0.0876689,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Research and development managers,1223,-1,122,12,Research and development managers,0.0893194,0,0,0.0893194,0,observed,FALSE,observed,FALSE,observed
+Agricultural and forestry production managers,1311,-1,131,13,dummy Agricultural and forestry production managers,0.0481256,0,0,0.0481256,0,observed,FALSE,observed,FALSE,observed
+Aquaculture and fisheries production managers,1312,-0.8823529,131,13,Aquaculture and fisheries production managers,0.0481256,0,0,0.0481256,0,observed,FALSE,observed,FALSE,observed
+Manufacturing managers,1321,-1,132,13,NA,0.14922366666666667,0.33333333333333337,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Mining managers,1322,-1,132,13,Mining managers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Construction managers,1323,-1,132,13,Construction managers,0.2260342,0,0,0.2260342,0,observed,FALSE,observed,FALSE,observed
+"Supply, distribution and related managers",1324,-0.8571429,132,13,"Supply , distribution and related managers",0.2216368,0,0,0.2216368,0,observed,FALSE,observed,FALSE,observed
+Information and communications technology services managers,1330,-1,133,13,NA,0.1424008714285714,0.14285714285714288,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Child care services managers,1341,-0.8333333,134,13,NA,0.22644195,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Health services managers,1342,-1,134,13,NA,0.22644195,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Aged care services managers,1343,-1,134,13,NA,0.22644195,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Social welfare managers,1344,-1,134,13,NA,0.22644195,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Education managers,1345,-1,134,13,NA,0.22644195,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Financial and insurance services branch managers,1346,-0.6923077,134,13,Financial and insurance services branch managers,0.0566944,0,0,0.0566944,0,observed,FALSE,observed,FALSE,observed
+Professional services managers not elsewhere classified,1349,-1,134,13,Professional services managers n.e.c.,0.39618949999999997,0,0,0.39618949999999997,0,observed,FALSE,observed,FALSE,observed
+Hotel managers,1411,-0.6666667,141,14,NA,0.1557418,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Restaurant managers,1412,-0.5,141,14,NA,0.1557418,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Retail and wholesale trade managers,1420,-0.4285715,142,14,Retail and wholesale trade managers,0.1133889,0,0,0.1133889,0,observed,FALSE,observed,FALSE,observed
+"Sports, recreation and cultural centre managers",1431,-0.5,143,14,"Sports, recreation and cultural centre managers",0.1980947,0,0,0.1980947,0,observed,FALSE,observed,FALSE,observed
+Physicists and astronomers,2111,-0.8333333,211,21,Physicists and astronomers,0.05,0,0,0.05,0,observed,FALSE,observed,FALSE,observed
+Meteorologists,2112,-1,211,21,Meteorologists,0.4329176,0,0,0.4329176,0,observed,FALSE,observed,FALSE,observed
+Chemists,2113,-1,211,21,Chemists,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+Geologists and geophysicists,2114,-1,211,21,Geologists and geophysicists,0.2149376,1,1,0.2149376,1,observed,FALSE,observed,FALSE,observed
+"Mathematicians, actuaries and statisticians",2120,-1,212,21,NA,0.24925024999999998,0.180555555,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Biologists, botanists, zoologists and related professionals",2131,-0.7777778,213,21,"Biologists, botanists, zoologists and related professionals",0.0690929,0.1111111,0,0.0690929,0.1111111,observed,FALSE,observed,FALSE,observed
+"Farming, forestry and fisheries advisers",2132,-1,213,21,"Farming, forestry and fisheries advisers",0.2072786,0,0,0.2072786,0,observed,FALSE,observed,FALSE,observed
+Environmental protection professionals,2133,-1,213,21,Environmental protection professionals,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Industrial and production engineers,2141,-1,214,21,Industrial and production engineers,0.05,0,0,0.05,0,observed,FALSE,observed,FALSE,observed
+Civil engineers,2142,-1,214,21,Civil engineers,0.3267401,0,0,0.3267401,0,observed,FALSE,observed,FALSE,observed
+Environmental engineers,2143,-1,214,21,Environmental engineers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Mechanical engineers,2144,-1,214,21,Mechanical engineers,0.2947051,0,0,0.2947051,0,observed,FALSE,observed,FALSE,observed
+Chemical engineers,2145,-0.7777778,214,21,Chemical engineers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Mining engineers, metallurgists and related professionals",2146,-1,214,21,"Mining engineers, metallurgists and related professionals",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Engineering professionals not elsewhere classified,2149,-1,214,21,Engineering professionals n.e.c.,0.1423095,0,0,0.1423095,0,observed,FALSE,observed,FALSE,observed
+Electrical engineers,2151,-0.7777778,215,21,Electrical engineers,0.1606959,0,0,0.1606959,0,observed,FALSE,observed,FALSE,observed
+Electronics engineers,2152,-1,215,21,Electronics engineers,0.0491788,0,0,0.0491788,0,observed,FALSE,observed,FALSE,observed
+Telecommunications engineers,2153,-1,215,21,Telecommunications engineers,0.0983575,0,0,0.0983575,0,observed,FALSE,observed,FALSE,observed
+Building architects,2161,-1,216,21,Building architects,0.2682825,0,0,0.2682825,0,observed,FALSE,observed,FALSE,observed
+Landscape architects,2162,-1,216,21,Landscape architects,0.260082,0,0,0.260082,0,observed,FALSE,observed,FALSE,observed
+Product and garment designers,2163,-1,216,21,NA,0.29626379999999997,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Town and traffic planners,2164,-1,216,21,Town and traffic planners,0.3604269,0,0,0.3604269,0,observed,FALSE,observed,FALSE,observed
+Cartographers and surveyors,2165,-1,216,21,NA,0.29626379999999997,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Graphic and multimedia designers,2166,-1,216,21,NA,0.29626379999999997,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Generalist medical practitioners,2211,-0.75,221,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Specialist medical practitioners,2212,-0.7333333,221,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Nursing professionals,2221,-1,222,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Midwifery professionals,2222,-0.7777778,222,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Traditional and complementary medicine professionals,2230,-0.7777778,223,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Paramedical practitioners,2240,-0.8181818,224,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Veterinarians,2250,-0.8,225,22,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Dentists,2261,-1,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Pharmacists,2262,-0.4285714,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Environmental and occupational health and hygiene professionals,2263,-1,226,22,Environmental and occupational health and hygiene professionals,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Physiotherapists,2264,-0.7777778,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Dieticians and nutritionists,2265,-1,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Audiologists and speech therapists,2266,-1,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Optometrists and ophthalmic opticians,2267,-0.7777778,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Health professionals not elsewhere classified,2269,-1,226,22,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+University and higher education teachers,2310,-1,231,23,NA,0.0862385,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Vocational education teachers,2320,-0.8333333,232,23,NA,0.0862385,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Secondary education teachers,2330,-1,233,23,NA,0.0862385,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Primary school teachers,2341,-1,234,23,NA,0.0862385,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Early childhood educators,2342,-1,234,23,NA,0.0862385,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Education methods specialists,2351,-1,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Special needs teachers,2352,-0.8461539,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Other language teachers,2353,-1,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Other music teachers,2354,-1,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Other arts teachers,2355,-1,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Information technology trainers,2356,-1,235,23,Information technology trainers,0.0862385,0,0,0.0862385,0,observed,FALSE,observed,FALSE,observed
+Teaching professionals not elsewhere classified,2359,-1,235,23,NA,0.0862385,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Accountants,2411,-0.6363636,241,24,NA,0.111794,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Financial and investment advisers,2412,-0.6666667,241,24,Financial and investment advisers,0.1563042,0,0,0.1563042,0,observed,FALSE,observed,FALSE,observed
+Financial analysts,2413,-1,241,24,Financial analysts,0.0672838,0,0,0.0672838,0,observed,FALSE,observed,FALSE,observed
+Management and organization analysts,2421,-1,242,24,NA,0.2097859,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Policy administration professionals,2422,-1,242,24,Policy administration professionals,0.3333333,0,0,0.3333333,0,observed,FALSE,observed,FALSE,observed
+Personnel and careers professionals,2423,-1,242,24,NA,0.2097859,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Training and staff development professionals,2424,-1,242,24,Training and staff development professionals,0.0862385,0,0,0.0862385,0,observed,FALSE,observed,FALSE,observed
+Advertising and marketing professionals,2431,-1,243,24,NA,0.10767196666666667,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Public relations professionals,2432,-1,243,24,Public relations professionals,0.2130159,0,0,0.2130159,0,observed,FALSE,observed,FALSE,observed
+Technical and medical sales professionals (excluding ICT),2433,-0.8666667,243,24,Technical and medical sales professionals (excluding ICT),0.055,0,0,0.055,0,observed,FALSE,observed,FALSE,observed
+Information and communications technology sales professionals,2434,-0.5,243,24,Information and communications technology sales professionals,0.055,0,0,0.055,0,observed,FALSE,observed,FALSE,observed
+Systems analysts,2511,-1,251,25,NA,0.0061315,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Software developers,2512,-1,251,25,NA,0.0061315,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Web and multimedia developers,2513,-1,251,25,NA,0.0061315,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Applications programmers,2514,-1,251,25,NA,0.0061315,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Software and applications developers and analysts not elsewhere classified,2519,-0.2,251,25,Software and applications developers and analysts n.e.c.,0.0061315,0,0,0.0061315,0,observed,FALSE,observed,FALSE,observed
+Database designers and administrators,2521,-1,252,25,NA,0.0030657,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Systems administrators,2522,-0.3333333,252,25,NA,0.0030657,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Computer network professionals,2523,-0.7777778,252,25,NA,0.0030657,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Database and network professionals not elsewhere classified,2529,-1,252,25,Database and network professionals n.e.c.,0.0030657,0,0,0.0030657,0,observed,FALSE,observed,FALSE,observed
+Lawyers,2611,-1,261,26,NA,0.0382507,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Judges,2612,-1,261,26,NA,0.0382507,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Legal professionals not elsewhere classified,2619,-0.5,261,26,Legal professionals n.e.c.,0.0382507,0,0,0.0382507,0,observed,FALSE,observed,FALSE,observed
+Archivists and curators,2621,-0.8461539,262,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Librarians and related information professionals,2622,-0.6363636,262,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Economists,2631,-1,263,26,NA,0.0449735,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Sociologists, anthropologists and related professionals",2632,-1,263,26,NA,0.0449735,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Philosophers, historians and political scientists",2633,-1,263,26,"Philosophers, historians and political scientists",0.0449735,0,0,0.0449735,0,observed,FALSE,observed,FALSE,observed
+Psychologists,2634,-1,263,26,NA,0.0449735,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Social work and counselling professionals,2635,-0.8333333,263,26,NA,0.0449735,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Religious professionals,2636,-1,263,26,NA,0.0449735,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Authors and related writers,2641,-0.7142857,264,26,NA,0.0193069,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Journalists,2642,-0.8461539,264,26,Journalists,0.0193069,0,0,0.0193069,0,observed,FALSE,observed,FALSE,observed
+"Translators, interpreters and other linguists",2643,-0.4285714,264,26,NA,0.0193069,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Visual artists,2651,-1,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Musicians, singers and composers",2652,-0.5,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Dancers and choreographers,2653,-1,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Film, stage and related directors and producers",2654,-0.8181819,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Actors,2655,-1,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Announcers on radio, television and other media",2656,-1,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Creative and performing artists not elsewhere classified,2659,-1,265,26,NA,0.03417703333333333,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Chemical and physical science technicians,3111,0.2,311,31,Chemical and physical science technicians,0.0572719,1,1,0.0572719,1,observed,FALSE,observed,FALSE,observed
+Civil engineering technicians,3112,-1,311,31,Civil engineering technicians,0.0446421,0,0,0.0446421,0,observed,FALSE,observed,FALSE,observed
+Electrical engineering technicians,3113,-0.5,311,31,Electrical engineering technicians,0.089361,0,0,0.089361,0,observed,FALSE,observed,FALSE,observed
+Electronics engineering technicians,3114,-0.8,311,31,Electronics engineering technicians,0.100273,0,0,0.100273,0,observed,FALSE,observed,FALSE,observed
+Mechanical engineering technicians,3115,-1,311,31,Mechanical engineering technicians,0.0462233,0,0,0.0462233,0,observed,FALSE,observed,FALSE,observed
+Chemical engineering technicians,3116,-0.6,311,31,Chemical engineering technicians,0.1064441,1,1,0.1064441,1,observed,FALSE,observed,FALSE,observed
+Mining and metallurgical technicians,3117,-0.5555556,311,31,Mining and metallurgical technicians,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Draughtspersons,3118,0,311,31,NA,0.075327375,0.375,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Physical and engineering science technicians not elsewhere classified,3119,-1,311,31,Physical and engineering science technicians n.e.c.,0.1584036,0,0,0.1584036,0,observed,FALSE,observed,FALSE,observed
+Mining supervisors,3121,-1,312,31,Mining supervisors,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Manufacturing supervisors,3122,-0.4285714,312,31,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Construction supervisors,3123,-0.6666667,312,31,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Power production plant operators,3131,0.25,313,31,Power production plant operators,0.119538,0.5,1,0.119538,0.5,observed,FALSE,observed,FALSE,observed
+Incinerator and water treatment plant operators,3132,0.5,313,31,Incinerator and water treatment plant operators,0.240863,0.5,1,0.240863,0.5,observed,FALSE,observed,FALSE,observed
+Chemical processing plant controllers,3133,0.7142857,313,31,Chemical processing plant controllers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Petroleum and natural gas refining plant operators,3134,0.6666667,313,31,Petroleum and natural gas refining plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Metal production process controllers,3135,0.4285714,313,31,Metal production process controllers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Life science technicians (excluding medical),3141,-0.0769231,314,31,Life science technicians (excluding medical),0.5,0,0,0.5,0,observed,FALSE,observed,FALSE,observed
+Agricultural technicians,3142,-0.7777778,314,31,Agricultural technicians,0.0550568,0,0,0.0550568,0,observed,FALSE,observed,FALSE,observed
+Forestry technicians,3143,-1,314,31,Forestry technicians,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Ships' engineers,3151,-0.3333333,315,31,NA,0.100273,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Ships' deck officers and pilots,3152,-0.4545455,315,31,NA,0.100273,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Aircraft pilots and related associate professionals,3153,-0.1428572,315,31,NA,0.100273,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Air traffic controllers,3154,-1,315,31,NA,0.100273,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Air traffic safety electronics technicians,3155,-1,315,31,Air traffic safety electronics technicians,0.100273,0,0,0.100273,0,observed,FALSE,observed,FALSE,observed
+Medical imaging and therapeutic equipment technicians,3211,-0.4545455,321,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Medical and pathology laboratory technicians,3212,-0.2727273,321,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Pharmaceutical technicians and assistants,3213,0.3333334,321,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Medical and dental prosthetic technicians,3214,-1,321,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Nursing associate professionals,3221,-0.75,322,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Midwifery associate professionals,3222,-1,322,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Traditional and complementary medicine associate professionals,3230,-1,323,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Veterinary technicians and assistants,3240,-0.8,324,32,NA,0.1198021,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Dental assistants and therapists,3251,-1,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Medical records and health information technicians,3252,0.4285714,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Community health workers,3253,-1,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Dispensing opticians,3254,-0.2,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Physiotherapy technicians and assistants,3255,-1,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Medical assistants,3256,-0.4,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Environmental and occupational health inspectors and associates,3257,-1,325,32,Environmental and occupational health inspectors and associates,0.1198021,0,0,0.1198021,0,observed,FALSE,observed,FALSE,observed
+Ambulance workers,3258,-0.6666667,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Health associate professionals not elsewhere classified,3259,-0.7777778,325,32,NA,0.1198021,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Securities and finance dealers and brokers,3311,-0.6,331,33,Securities and finance dealers and brokers,0.006681,0,0,0.006681,0,observed,FALSE,observed,FALSE,observed
+Credit and loans officers,3312,0.3333333,331,33,NA,0.006681,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Accounting associate professionals,3313,0.3333333,331,33,NA,0.006681,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Statistical, mathematical and related associate professionals",3314,-0.75,331,33,NA,0.006681,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Valuers and loss assessors,3315,-0.6,331,33,NA,0.006681,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Insurance representatives,3321,-0.7142857,332,33,NA,0.029727,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Commercial sales representatives,3322,-0.75,332,33,Commercial sales representatives,0.055,0,0,0.055,0,observed,FALSE,observed,FALSE,observed
+Buyers,3323,-0.875,332,33,NA,0.029727,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Trade brokers,3324,-1,332,33,Trade brokers,0.004454,0,0,0.004454,0,observed,FALSE,observed,FALSE,observed
+Clearing and forwarding agents,3331,1,333,33,NA,0.0615079,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Conference and event planners,3332,-1,333,33,NA,0.0615079,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Employment agents and contractors,3333,-0.4285714,333,33,NA,0.0615079,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Real estate agents and property managers,3334,-0.1428571,333,33,NA,0.0615079,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Business services agents not elsewhere classified,3339,-0.1428572,333,33,Business services agents n.e.c.,0.0615079,0,0,0.0615079,0,observed,FALSE,observed,FALSE,observed
+Office supervisors,3341,-1,334,33,NA,0.02182265714285714,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Legal secretaries,3342,0.7142857,334,33,NA,0.02182265714285714,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Administrative and executive secretaries,3343,0.5,334,33,NA,0.02182265714285714,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Medical secretaries,3344,0.5,334,33,NA,0.02182265714285714,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Customs and border inspectors,3351,-0.25,335,33,Customs and border inspectors,0.0062789,0,0,0.0062789,0,observed,FALSE,observed,FALSE,observed
+Government tax and excise officials,3352,0,335,33,NA,0.0083719,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Government social benefits officials,3353,0.2,335,33,Government social benefits officials,0.0094184,0,0,0.0094184,0,observed,FALSE,observed,FALSE,observed
+Government licensing officials,3354,0.3333333,335,33,Government licensing officials,0.0094184,0,0,0.0094184,0,observed,FALSE,observed,FALSE,observed
+Police inspectors and detectives,3355,-1,335,33,NA,0.0083719,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Government regulatory associate professionals not elsewhere classified,3359,-0.2,335,33,NA,0.0083719,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Legal and related associate professionals,3411,0.2,341,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Social work associate professionals,3412,-1,341,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Religious associate professionals,3413,-1,341,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Athletes and sports players,3421,-0.75,342,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+"Sports coaches, instructors and officials",3422,-0.7142857,342,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Fitness and recreation instructors and program leaders,3423,-0.7777778,342,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Photographers,3431,0.25,343,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Interior designers and decorators,3432,-1,343,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+"Gallery, museum and library technicians",3433,-0.1111111,343,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Chefs,3434,-0.5,343,34,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Information and communications technology operations technicians,3511,0.5555556,351,35,NA,0.100273,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Information and communications technology user support technicians,3512,-0.2,351,35,NA,0.100273,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Computer network and systems technicians,3513,0.3333333,351,35,NA,0.100273,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Web technicians,3514,-0.5555556,351,35,NA,0.100273,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Broadcasting and audiovisual technicians,3521,0.1428571,352,35,NA,0.100273,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Telecommunications engineering technicians,3522,-1,352,35,Telecommunications engineering technicians,0.100273,0,0,0.100273,0,observed,FALSE,observed,FALSE,observed
+General office clerks,4110,0.75,411,41,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Secretaries (general),4120,1,412,41,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Typists and word processing operators,4131,1,413,41,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Data entry clerks,4132,1,413,41,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Bank tellers and related clerks,4211,1,421,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+"Bookmakers, croupiers and related gaming workers",4212,-0.2,421,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Pawnbrokers and money-lenders,4213,0.6666666,421,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Debt collectors and related workers,4214,-0.2,421,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Travel consultants and clerks,4221,0.25,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Contact centre information clerks,4222,0.6666666,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Telephone switchboard operators,4223,0.6666667,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Hotel receptionists,4224,0.5555556,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Inquiry clerks,4225,0.2,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Receptionists (general),4226,0.2,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Survey and market research interviewers,4227,0.2,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Client information workers not elsewhere classified,4229,-0.3333333,422,42,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Accounting and bookkeeping clerks,4311,1,431,43,NA,0.0284543,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Statistical, finance and insurance clerks",4312,1,431,43,NA,0.0284543,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Payroll clerks,4313,1,431,43,NA,0.0284543,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Stock clerks,4321,1,432,43,Stock clerks,0.0284543,0,0,0.0284543,0,observed,FALSE,observed,FALSE,observed
+Production clerks,4322,0.1428571,432,43,NA,0.0284543,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Transport clerks,4323,0.0909091,432,43,NA,0.0284543,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Library clerks,4411,0.6666666,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Mail carriers and sorting clerks,4412,0.6666667,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+"Coding, proofreading and related clerks",4413,0.6,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Scribes and related workers,4414,-0.3333333,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Filing and copying clerks,4415,1,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Personnel clerks,4416,0.7142857,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Clerical support workers not elsewhere classified,4419,0.5,441,44,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Travel attendants and travel stewards,5111,-0.5,511,51,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Transport conductors,5112,-0.4,511,51,Transport conductors,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Travel guides,5113,-0.8,511,51,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Cooks,5120,-0.3333333,512,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Waiters,5131,-0.7142857,513,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Bartenders,5132,-0.4545454,513,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Hairdressers,5141,-0.75,514,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Beauticians and related workers,5142,-0.75,514,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Cleaning and housekeeping supervisors in offices, hotels and other establishments",5151,-0.5555556,515,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Domestic housekeepers,5152,-0.4545455,515,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Building caretakers,5153,-0.5,515,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Astrologers, fortune-tellers and related workers",5161,-1,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Companions and valets,5162,-1,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Undertakers and embalmers,5163,-0.6666667,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Pet groomers and animal care workers,5164,-0.7777778,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Driving instructors,5165,-1,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Personal services workers not elsewhere classified,5169,-1,516,51,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Stall and market salespersons,5211,-0.4285715,521,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Street food salespersons,5212,-0.6666667,521,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Shopkeepers,5221,-0.1111111,522,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Shop supervisors,5222,0.1111111,522,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Shop sales assistants,5223,-0.3333333,522,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Cashiers and ticket clerks,5230,0.75,523,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Fashion and other models,5241,-1,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Sales demonstrators,5242,-0.6666667,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Door-to-door salespersons,5243,-0.25,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Contact centre salespersons,5244,0.25,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Service station attendants,5245,-0.25,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Food service counter attendants,5246,-0.6,524,52,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Child care workers,5311,-0.5,531,53,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Teachers' aides,5312,-0.7142857,531,53,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Health care assistants,5321,-1,532,53,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Home-based personal care workers,5322,-0.8181819,532,53,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Personal care workers in health services not elsewhere classified,5329,-1,532,53,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Firefighters,5411,-1,541,54,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Police officers,5412,-1,541,54,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Prison guards,5413,-1,541,54,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Security guards,5414,-1,541,54,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Protective services workers not elsewhere classified,5419,-1,541,54,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Field crop and vegetable growers,6111,-0.5714285,611,61,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Tree and shrub crop growers,6112,-0.5714285,611,61,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Gardeners, horticultural and nursery growers",6113,-0.6,611,61,"Gardeners, horticultural and nursery growers",1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Mixed crop growers,6114,-0.5714285,611,61,NA,1,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Livestock and dairy producers,6121,-0.6,612,61,Livestock and dairy producers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Poultry producers,6122,-0.5,612,61,Poultry producers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Apiarists and sericulturists,6123,-0.6363636,612,61,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Animal producers not elsewhere classified,6129,-0.6666667,612,61,Animal producers n.e.c.,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Mixed crop and animal producers,6130,-0.7142857,613,61,NA,0.25,0.75,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Forestry and related workers,6210,-0.6923077,621,62,Forestry and related workers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Aquaculture workers,6221,-0.5714286,622,62,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Inland and coastal waters fishery workers,6222,-0.6,622,62,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Deep-sea fishery workers,6223,-0.6,622,62,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Hunters and trappers,6224,-1,622,62,NA,1,0,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Subsistence crop farmers,6310,-0.4285715,631,63,NA,0,1,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Subsistence livestock farmers,6320,-0.6666667,632,63,Subsistence livestock farmers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Subsistence mixed crop and livestock farmers,6330,-0.5555556,633,63,NA,0,1,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Subsistence fishers, hunters, trappers and gatherers",6340,-0.5,634,63,NA,0,1,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+House builders,7111,-1,711,71,House builders,0.2260342,0,0,0.2260342,0,observed,FALSE,observed,FALSE,observed
+Bricklayers and related workers,7112,-1,711,71,Bricklayers and related workers,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+"Stonemasons, stone cutters, splitters and carvers",7113,-0.7142857,711,71,NA,0.2716111,0.16666666666666669,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Concrete placers, concrete finishers and related workers",7114,-1,711,71,NA,0.2716111,0.16666666666666669,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Carpenters and joiners,7115,-1,711,71,NA,0.2716111,0.16666666666666669,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Building frame and related trades workers not elsewhere classified,7119,-1,711,71,Building frame and related trades workers n.e.c.,0.5887991,0,0,0.5887991,0,observed,FALSE,observed,FALSE,observed
+Roofers,7121,-1,712,71,Roofers,0.3009046,0,0,0.3009046,0,observed,FALSE,observed,FALSE,observed
+Floor layers and tile setters,7122,-1,712,71,NA,0.196823325,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Plasterers,7123,-1,712,71,NA,0.196823325,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Insulation workers,7124,-0.6666667,712,71,Insulation workers,0.3,0,0,0.3,0,observed,FALSE,observed,FALSE,observed
+Glaziers,7125,-1,712,71,NA,0.196823325,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Plumbers and pipe fitters,7126,-1,712,71,Plumbers and pipe fitters,0.1206143,0,0,0.1206143,0,observed,FALSE,observed,FALSE,observed
+Air conditioning and refrigeration mechanics,7127,-0.6,712,71,Air conditioning and refrigeration mechanics,0.0657744,0,0,0.0657744,0,observed,FALSE,observed,FALSE,observed
+Painters and related workers,7131,-1,713,71,NA,0,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Spray painters and varnishers,7132,-1,713,71,Spray painters and varnishers,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+Building structure cleaners,7133,-1,713,71,NA,0,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Metal moulders and coremakers,7211,0.7142857,721,72,Metal moulders and coremakers,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+Welders and flame cutters,7212,0.75,721,72,NA,0.03568935,0.41666665,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Sheet metal workers,7213,0.3333333,721,72,Sheet-metal workers,0.0713787,0.3333333,1,0.0713787,0.3333333,observed,FALSE,observed,FALSE,observed
+Structural metal preparers and erectors,7214,0,721,72,NA,0.03568935,0.41666665,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Riggers and cable splicers,7215,-1,721,72,NA,0.03568935,0.41666665,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Blacksmiths, hammersmiths and forging press workers",7221,0.75,722,72,"Blacksmiths, hammersmiths and forging press workers",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Toolmakers and related workers,7222,0.0769231,722,72,Toolmakers and related workers,0,0.3333333,1,0,0.3333333,observed,FALSE,observed,FALSE,observed
+Metal working machine tool setters and operators,7223,0.6666667,722,72,Metal working machine tool setters and operators,0.005985,0.3636364,1,0.005985,0.3636364,observed,FALSE,observed,FALSE,observed
+"Metal polishers, wheel grinders and tool sharpeners",7224,0.1428571,722,72,"Metal polishers, wheel grinders and tool sharpeners",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Motor vehicle mechanics and repairers,7231,-1,723,72,Motor vehicle mechanics and repairers,0.0340898,0,0,0.0340898,0,observed,FALSE,observed,FALSE,observed
+Aircraft engine mechanics and repairers,7232,-0.6,723,72,NA,0.3817336333333333,0.11111109999999999,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Agricultural and industrial machinery mechanics and repairers,7233,-0.4285714,723,72,Agricultural and industrial machinery mechanics and repairers,0.1111111,0.3333333,1,0.1111111,0.3333333,observed,FALSE,observed,FALSE,observed
+Bicycle and related repairers,7234,-0.6666666,723,72,Bicycle and related repairers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Precision-instrument makers and repairers,7311,-0.1666666,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Musical instrument makers and tuners,7312,-1,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Jewellery and precious metal workers,7313,-0.8181819,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Potters and related workers,7314,-0.1666667,731,73,Potters and related workers,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+"Glass makers, cutters, grinders and finishers",7315,0.8461539,731,73,"Glass makers, cutters, grinders and finishers",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Signwriters, decorative painters, engravers and etchers",7316,-0.8666667,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Handicraft workers in wood, basketry and related materials",7317,-1,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Handicraft workers in textile, leather and related materials",7318,0.8666667,731,73,NA,0,0.75,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Pre-press technicians,7321,0.4285715,732,73,NA,0,0.75,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Printers,7322,0.7777778,732,73,NA,0,0.75,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Print finishing and binding workers,7323,1,732,73,NA,0,0.75,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Building and related electricians,7411,-0.75,741,74,Building and related electricians,0.5,0,0,0.5,0,observed,FALSE,observed,FALSE,observed
+Electrical mechanics and fitters,7412,-0.5555556,741,74,Electrical mechanics and fitters,0.1348,0.1538462,0,0.1348,0.1538462,observed,FALSE,observed,FALSE,observed
+Electrical line installers and repairers,7413,-0.6666666,741,74,Electrical line installers and repairers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Electronics mechanics and servicers,7421,-0.7777778,742,74,Electronics mechanics and servicers,0.1348,0.1428571,0,0.1348,0.1428571,observed,FALSE,observed,FALSE,observed
+Information and communications technology installers and servicers,7422,-0.3333333,742,74,NA,0.1348,0.1428571,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Butchers, fishmongers and related food preparers",7511,0.3333334,751,75,"Butchers, fishmongers and related food preparers",0,0.25,0,0,0.25,observed,FALSE,observed,FALSE,observed
+"Bakers, pastry-cooks and confectionery makers",7512,0.25,751,75,NA,0,0.6388889,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Dairy products makers,7513,1,751,75,Dairy-products makers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Fruit, vegetable and related preservers",7514,0.6,751,75,NA,0,0.6388889,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Food and beverage tasters and graders,7515,0.6,751,75,NA,0,0.6388889,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Tobacco preparers and tobacco products makers,7516,1,751,75,Tobacco preparers and tobacco products makers,0,0.6666667,1,0,0.6666667,observed,FALSE,observed,FALSE,observed
+Wood treaters,7521,0.25,752,75,Wood treaters,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Cabinet-makers and related workers,7522,0,752,75,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Woodworking machine tool setters and operators,7523,0.1428571,752,75,Woodworking-machine tool setters and operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Tailors, dressmakers, furriers and hatters",7531,-0.8333334,753,75,NA,0,0.5555555333333333,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Garment and related patternmakers and cutters,7532,0.2307692,753,75,Garment and related pattern-makers and cutters,0,0.3333333,1,0,0.3333333,observed,FALSE,observed,FALSE,observed
+"Sewing, embroidery and related workers",7533,-0.8333334,753,75,"Sewing, embroidery and related workers",0,0.3333333,1,0,0.3333333,observed,FALSE,observed,FALSE,observed
+Upholsterers and related workers,7534,-0.5,753,75,Upholsterers and related workers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Pelt dressers, tanners and fellmongers",7535,1,753,75,NA,0,0.5555555333333333,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Shoemakers and related workers,7536,-0.5714285,753,75,NA,0,0.5555555333333333,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Underwater divers,7541,-0.8333334,754,75,NA,0.03068275,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Shotfirers and blasters,7542,-0.1428572,754,75,Shotfirers and blasters,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Product graders and testers (excluding foods and beverages),7543,0.2,754,75,Product graders and testers (excluding foods and beverages),0.0613655,0,0,0.0613655,0,observed,FALSE,observed,FALSE,observed
+Fumigators and other pest and weed controllers,7544,-0.7142857,754,75,NA,0.03068275,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Craft and related workers not elsewhere classified,7549,1,754,75,NA,0.03068275,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Miners and quarriers,8111,0.5555556,811,81,Miners and quarriers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Mineral and stone processing plant operators,8112,0.8181819,811,81,Mineral and stone processing plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Well drillers and borers and related workers,8113,-0.2,811,81,Well drillers and borers and related workers,0.0083476,1,1,0.0083476,1,observed,FALSE,observed,FALSE,observed
+"Cement, stone and other mineral products machine operators",8114,0.8333333,811,81,"Cement, stone and other mineral products machine operators",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Metal processing plant operators,8121,0.7777778,812,81,Metal processing plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Metal finishing, plating and coating machine operators",8122,1,812,81,"Metal finishing, plating and coating machine operators",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Chemical products plant and machine operators,8131,0.6666667,813,81,Chemical products plant and machine operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Photographic products machine operators,8132,0.7777778,813,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Rubber products machine operators,8141,0.6666667,814,81,Rubber products machine operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Plastic products machine operators,8142,0.75,814,81,Plastic products machine operators,0,0.5833333,1,0,0.5833333,observed,FALSE,observed,FALSE,observed
+Paper products machine operators,8143,1,814,81,Paper products machine operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+"Fibre preparing, spinning and winding machine operators",8151,1,815,81,"Fibre preparing, spinning and winding machine operators",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Weaving and knitting machine operators,8152,0.6923077,815,81,Weaving and knitting machine operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Sewing machine operators,8153,0.75,815,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Bleaching, dyeing and fabric cleaning machine operators",8154,0.8461539,815,81,"Bleaching, dyeing and fabric cleaning machine operators",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Fur and leather preparing machine operators,8155,0.8181819,815,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Shoemaking and related machine operators,8156,1,815,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Laundry machine operators,8157,0.1111111,815,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Textile, fur and leather products machine operators not elsewhere classified",8159,1,815,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Food and related products machine operators,8160,1,816,81,Food and related products machine operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Pulp and papermaking plant operators,8171,0.4,817,81,Pulp and papermaking plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Wood processing plant operators,8172,0.6,817,81,Wood processing plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Glass and ceramics plant operators,8181,1,818,81,Glass and ceramics plant operators,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Steam engine and boiler operators,8182,0.4,818,81,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Packing, bottling and labelling machine operators",8183,1,818,81,"Packing, bottling and labelling machine operators",0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Mechanical machinery assemblers,8211,1,821,82,Mechanical machinery assemblers,0.0647683,0,0,0.0647683,0,observed,FALSE,observed,FALSE,observed
+Electrical and electronic equipment assemblers,8212,1,821,82,NA,0.0647683,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Assemblers not elsewhere classified,8219,1,821,82,NA,0.0647683,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Locomotive engine drivers,8311,-1,831,83,Locomotive engine drivers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+"Railway brake, signal and switch operators",8312,-0.2,831,83,"dummy Railway brake, signal and switch operators",1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Motorcycle drivers,8321,-0.6,832,83,NA,0.5775402571428572,0.08571428571428572,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Car, taxi and van drivers",8322,-0.25,832,83,NA,0.5775402571428572,0.08571428571428572,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Bus and tram drivers,8331,-0.7142857,833,83,Bus and tram drivers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Heavy truck and lorry drivers,8332,0.1428572,833,83,Heavy truck and lorry drivers,0.0427818,0,0,0.0427818,0,observed,FALSE,observed,FALSE,observed
+Mobile farm and forestry plant operators,8341,-1,834,83,Mobile farm and forestry plant operators,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Earthmoving and related plant operators,8342,-1,834,83,Earthmoving and related plant operators,0,0.4,1,0,0.4,observed,FALSE,observed,FALSE,observed
+"Crane, hoist and related plant operators",8343,-1,834,83,"Crane, hoist and related plant operators",0,0.2,0,0,0.2,observed,FALSE,observed,FALSE,observed
+Lifting truck operators,8344,-0.6,834,83,NA,0.33333333333333337,0.2,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Ships' deck crews and related workers,8350,-1,835,83,NA,0.5775402571428572,0.08571428571428572,0,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Domestic cleaners and helpers,9111,-1,911,91,NA,0,1,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+"Cleaners and helpers in offices, hotels and other establishments",9112,-1,911,91,NA,0,1,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Hand launderers and pressers,9121,-1,912,91,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Vehicle cleaners,9122,-1,912,91,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Window cleaners,9123,-1,912,91,NA,0,1,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Other cleaning workers,9129,-1,912,91,Other cleaning workers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Crop farm labourers,9211,-0.75,921,92,NA,0.5,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Livestock farm labourers,9212,-0.4545455,921,92,NA,0.5,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Mixed crop and livestock farm labourers,9213,-0.5384616,921,92,NA,0.5,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Garden and horticultural labourers,9214,-0.8,921,92,Garden and horticultural labourers,0,0,0,0,0,observed,FALSE,observed,FALSE,observed
+Forestry labourers,9215,-1,921,92,Forestry labourers,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Fishery and aquaculture labourers,9216,-0.7142857,921,92,NA,0.5,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Mining and quarrying labourers,9311,-1,931,93,Mining and quarrying labourers,0,1,1,0,1,observed,FALSE,observed,FALSE,observed
+Civil engineering labourers,9312,-1,931,93,NA,0.01317275,0.5,1,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Building construction labourers,9313,-1,931,93,Building construction labourers,0.0263455,0,0,0.0263455,0,observed,FALSE,observed,FALSE,observed
+Hand packers,9321,1,932,93,NA,0.25,0.25,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Manufacturing labourers not elsewhere classified,9329,0.2,932,93,Manufacturing labourers n.e.c.,0.25,0.25,0,0.25,0.25,observed,FALSE,observed,FALSE,observed
+Hand and pedal vehicle drivers,9331,-0.6,933,93,NA,0.09211516666666666,0.41666666666666663,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Drivers of animal-drawn vehicles and machinery,9332,-0.7777778,933,93,NA,0.09211516666666666,0.41666666666666663,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Freight handlers,9333,-0.3333333,933,93,NA,0.09211516666666666,0.41666666666666663,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Shelf fillers,9334,-1,933,93,NA,0.09211516666666666,0.41666666666666663,1,NA,NA,imputed_2dg,TRUE,imputed_2dg,TRUE,computed_from_brownness
+Fast food preparers,9411,-0.5555556,941,94,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Kitchen helpers,9412,-1,941,94,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Street and related services workers,9510,-0.75,951,95,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Street vendors (excluding food),9520,-0.6666667,952,95,NA,NA,NA,NA,NA,NA,missing,NA,missing,NA,missing
+Garbage and recycling collectors,9611,-1,961,96,dummy Garbage and recycling collectors,0.5,0,0,0.5,0,observed,FALSE,observed,FALSE,observed
+Refuse sorters,9612,-0.6666667,961,96,Refuse sorters,1,0,0,1,0,observed,FALSE,observed,FALSE,observed
+Sweepers and related labourers,9613,-1,961,96,NA,0.75,0,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+"Messengers, package deliverers and luggage porters",9621,-0.3333333,962,96,NA,0.065,0.25,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Odd-job persons,9622,-1,962,96,Odd job persons,0.13,0,0,0.13,0,observed,FALSE,observed,FALSE,observed
+Meter readers and vending-machine collectors,9623,-0.1428572,962,96,Meter readers and vending-machine collectors,0,0.5,1,0,0.5,observed,FALSE,observed,FALSE,observed
+Water and firewood collectors,9624,-1,962,96,NA,0.065,0.25,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness
+Elementary workers not elsewhere classified,9629,-0.7777778,962,96,NA,0.065,0.25,0,NA,NA,imputed_3dg,TRUE,imputed_3dg,TRUE,computed_from_brownness

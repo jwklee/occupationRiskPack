@@ -1,0 +1,155 @@
+isco08_code,isco08_title,greenness,brownness,brown_dummy
+1311,Agricultural and forestry production managers,0.0481256,0,0
+7233,Agricultural and industrial machinery mechanics and repairers,0.1111111,0.3333333,1
+3142,Agricultural technicians,0.0550568,0,0
+7127,Air conditioning and refrigeration mechanics,0.0657744,0,0
+3155,Air traffic safety electronics technicians,0.100273,0,0
+6129,Animal producers n.e.c.,0,1,1
+1312,Aquaculture and fisheries production managers,0.0481256,0,0
+7234,Bicycle and related repairers,1,0,0
+2131,"Biologists, botanists, zoologists and related professionals",0.0690929,0.1111111,0
+7221,"Blacksmiths, hammersmiths and forging press workers",0,1,1
+8154,"Bleaching, dyeing and fabric cleaning machine operators",0,1,1
+7112,Bricklayers and related workers,0,0.5,1
+7411,Building and related electricians,0.5,0,0
+2161,Building architects,0.2682825,0,0
+9313,Building construction labourers,0.0263455,0,0
+7119,Building frame and related trades workers n.e.c.,0.5887991,0,0
+8331,Bus and tram drivers,1,0,0
+3339,Business services agents n.e.c.,0.0615079,0,0
+1219,Business services and administration managers n.e.c.,0.0660316,0,0
+7511,"Butchers, fishmongers and related food preparers",0,0.25,0
+8114,"Cement, stone and other mineral products machine operators",0,1,1
+3111,Chemical and physical science technicians,0.0572719,1,1
+3116,Chemical engineering technicians,0.1064441,1,1
+2145,Chemical engineers,0,1,1
+3133,Chemical processing plant controllers,0,1,1
+8131,Chemical products plant and machine operators,0,1,1
+2113,Chemists,0,0.5,1
+3112,Civil engineering technicians,0.0446421,0,0
+2142,Civil engineers,0.3267401,0,0
+3322,Commercial sales representatives,0.055,0,0
+1323,Construction managers,0.2260342,0,0
+8343,"Crane, hoist and related plant operators",0,0.2,0
+3351,Customs and border inspectors,0.0062789,0,0
+7513,Dairy-products makers,0,1,1
+2529,Database and network professionals n.e.c.,0.0030657,0,0
+8342,Earthmoving and related plant operators,0,0.4,1
+3113,Electrical engineering technicians,0.089361,0,0
+2151,Electrical engineers,0.1606959,0,0
+7413,Electrical line installers and repairers,1,0,0
+7412,Electrical mechanics and fitters,0.1348,0.1538462,0
+3114,Electronics engineering technicians,0.100273,0,0
+2152,Electronics engineers,0.0491788,0,0
+7421,Electronics mechanics and servicers,0.1348,0.1428571,0
+2149,Engineering professionals n.e.c.,0.1423095,0,0
+2263,Environmental and occupational health and hygiene professionals,1,0,0
+3257,Environmental and occupational health inspectors and associates,0.1198021,0,0
+2143,Environmental engineers,1,0,0
+2133,Environmental protection professionals,1,0,0
+2132,"Farming, forestry and fisheries advisers",0.2072786,0,0
+8151,"Fibre preparing, spinning and winding machine operators",0,1,1
+2413,Financial analysts,0.0672838,0,0
+1346,Financial and insurance services branch managers,0.0566944,0,0
+2412,Financial and investment advisers,0.1563042,0,0
+8160,Food and related products machine operators,0,1,1
+6210,Forestry and related workers,1,0,0
+9215,Forestry labourers,1,0,0
+3143,Forestry technicians,1,0,0
+9611,dummy Garbage and recycling collectors,0.5,0,0
+9214,Garden and horticultural labourers,0,0,0
+6113,"Gardeners, horticultural and nursery growers",1,0,0
+7532,Garment and related pattern-makers and cutters,0,0.3333333,1
+2114,Geologists and geophysicists,0.2149376,1,1
+8181,Glass and ceramics plant operators,0,1,1
+7315,"Glass makers, cutters, grinders and finishers",0,1,1
+3354,Government licensing officials,0.0094184,0,0
+3353,Government social benefits officials,0.0094184,0,0
+8332,Heavy truck and lorry drivers,0.0427818,0,0
+7111,House builders,0.2260342,0,0
+3132,Incinerator and water treatment plant operators,0.240863,0.5,1
+2141,Industrial and production engineers,0.05,0,0
+2434,Information and communications technology sales professionals,0.055,0,0
+2356,Information technology trainers,0.0862385,0,0
+7124,Insulation workers,0.3,0,0
+2642,Journalists,0.0193069,0,0
+2162,Landscape architects,0.260082,0,0
+2619,Legal professionals n.e.c.,0.0382507,0,0
+3141,Life science technicians (excluding medical),0.5,0,0
+6121,Livestock and dairy producers,0,1,1
+8311,Locomotive engine drivers,1,0,0
+9329,Manufacturing labourers n.e.c.,0.25,0.25,0
+3115,Mechanical engineering technicians,0.0462233,0,0
+2144,Mechanical engineers,0.2947051,0,0
+8211,Mechanical machinery assemblers,0.0647683,0,0
+8122,"Metal finishing, plating and coating machine operators",0,1,1
+7211,Metal moulders and coremakers,0,0.5,1
+7224,"Metal polishers, wheel grinders and tool sharpeners",0,1,1
+8121,Metal processing plant operators,0,1,1
+3135,Metal production process controllers,0,1,1
+7223,Metal working machine tool setters and operators,0.005985,0.3636364,1
+2112,Meteorologists,0.4329176,0,0
+9623,Meter readers and vending-machine collectors,0,0.5,1
+8112,Mineral and stone processing plant operators,0,1,1
+8111,Miners and quarriers,0,1,1
+3117,Mining and metallurgical technicians,0,1,1
+9311,Mining and quarrying labourers,0,1,1
+2146,"Mining engineers, metallurgists and related professionals",0,1,1
+1322,Mining managers,0,1,1
+3121,Mining supervisors,0,1,1
+8341,Mobile farm and forestry plant operators,1,0,0
+7231,Motor vehicle mechanics and repairers,0.0340898,0,0
+9622,Odd job persons,0.13,0,0
+9129,Other cleaning workers,0,1,1
+8183,"Packing, bottling and labelling machine operators",0,1,1
+8143,Paper products machine operators,0,1,1
+3134,Petroleum and natural gas refining plant operators,0,1,1
+2633,"Philosophers, historians and political scientists",0.0449735,0,0
+3119,Physical and engineering science technicians n.e.c.,0.1584036,0,0
+2111,Physicists and astronomers,0.05,0,0
+8142,Plastic products machine operators,0,0.5833333,1
+7126,Plumbers and pipe fitters,0.1206143,0,0
+2422,Policy administration professionals,0.3333333,0,0
+1213,Policy and planning managers,0.3961895,0,0
+7314,Potters and related workers,0,0.5,1
+6122,Poultry producers,0,1,1
+3131,Power production plant operators,0.119538,0.5,1
+7543,Product graders and testers (excluding foods and beverages),0.0613655,0,0
+1349,Professional services managers n.e.c.,0.3961895,0,0
+2432,Public relations professionals,0.2130159,0,0
+8171,Pulp and papermaking plant operators,0,1,1
+8312,"dummy Railway brake, signal and switch operators",1,0,0
+9612,Refuse sorters,1,0,0
+1223,Research and development managers,0.0893194,0,0
+1420,Retail and wholesale trade managers,0.1133889,0,0
+7121,Roofers,0.3009046,0,0
+8141,Rubber products machine operators,0,1,1
+1221,Sales and marketing managers,0.0860184,0,0
+3311,Securities and finance dealers and brokers,0.006681,0,0
+1112,Senior government officials,0.0377963,0,0
+1114,Senior officials of special-interest organizations,0.1698594,0,0
+7533,"Sewing, embroidery and related workers",0,0.3333333,1
+7213,Sheet-metal workers,0.0713787,0.3333333,1
+7542,Shotfirers and blasters,0,1,1
+2519,Software and applications developers and analysts n.e.c.,0.0061315,0,0
+1431,"Sports, recreation and cultural centre managers",0.1980947,0,0
+7132,Spray painters and varnishers,0,0.5,1
+8189,Stationary plant and machine operators n.e.c.,0,0.5,1
+4321,Stock clerks,0.0284543,0,0
+6320,Subsistence livestock farmers,0,1,1
+1324,"Supply , distribution and related managers",0.2216368,0,0
+2433,Technical and medical sales professionals (excluding ICT),0.055,0,0
+3522,Telecommunications engineering technicians,0.100273,0,0
+2153,Telecommunications engineers,0.0983575,0,0
+7516,Tobacco preparers and tobacco products makers,0,0.6666667,1
+7222,Toolmakers and related workers,0,0.3333333,1
+2164,Town and traffic planners,0.3604269,0,0
+3324,Trade brokers,0.004454,0,0
+2424,Training and staff development professionals,0.0862385,0,0
+5112,Transport conductors,1,0,0
+7534,Upholsterers and related workers,0,1,1
+8152,Weaving and knitting machine operators,0,1,1
+8113,Well drillers and borers and related workers,0.0083476,1,1
+8172,Wood processing plant operators,0,1,1
+7521,Wood treaters,0,1,1
+7523,Woodworking-machine tool setters and operators,0,1,1

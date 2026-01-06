@@ -1,0 +1,715 @@
+---
+title: "occupationRiskPack: A Comprehensive Guide"
+author: "Jaewook Lee"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+bibliography: references.bib
+csl: sage-harvard.csl
+vignette: >
+  %\VignetteIndexEntry{occupationRiskPack: A Comprehensive Guide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+#library(occupationRiskPack)
+library(dplyr)
+library(knitr)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE,
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+# Introduction
+
+The **occupationRiskPack** package provides a unified interface for accessing and analyzing occupation-level risk variables commonly used in labor economics, political economy, and sociological research. The package consolidates data from multiple authoritative sources into a consistent framework built around standardized occupation classification systems.
+
+## Key Features
+
+- **Standardized occupation codes**: All data is organized by ISCO (International Standard Classification of Occupations) or SOC (Standard Occupational Classification) codes
+- **Multiple risk dimensions**: Automation risk, offshorability, skill specificity, environmental exposure, and more
+- **Cross-classification support**: Crosswalks between ISCO-88, ISCO-08, SOC 2010, and SOC 2018
+- **Analysis utilities**: Functions for ranking occupations, summarizing by occupation groups, and imputing missing values
+- **Proper citations**: Each data loader displays source information to facilitate proper attribution
+
+## Installation
+
+```{r}
+# Install from GitHub (when available)
+# devtools::install_github("jwklee/occupationRiskPack")
+
+# Or install from CRAN (when available)
+# install.packages("occupationRiskPack")
+```
+
+```{r}
+# Load the package
+library(occupationRiskPack)
+library(dplyr)
+```
+
+# Occupation Classification Systems
+
+The package supports multiple occupation classification systems. Understanding these systems is essential for merging data across sources.
+
+> **Important:** When merging data from different sources using ISCO or SOC codes, occupation titles may vary slightly between datasets. **Use CODES (e.g., 'isco08_code' or 'soc2018_code') as the merge key**, not occupation titles.
+
+## ISCO-08 (International Standard)
+
+ISCO-08 is the primary classification system used in this package. It provides a hierarchical structure:
+
+- **1-digit**: Major groups (e.g., "1" = Managers)
+- **2-digit**: Sub-major groups (e.g., "11" = Chief Executives, Senior Officials and Legislators)
+- **3-digit**: Minor groups (e.g., "111" = Legislators and Senior Officials)
+- **4-digit**: Unit groups (e.g., "1111" = Legislators)
+
+```{r}
+# Load the baseline ISCO-08 table (427 4-digit codes)
+isco <- base_isco()
+head(isco)
+
+# Load detailed ISCO-08 structure with definitions
+isco_detail <- base_isco_detail()
+head(isco_detail)
+
+# Filter to specific level
+isco_2digit <- base_isco_detail(digits = 2)
+```
+
+**Variables in `base_isco()`:**
+
+| Variable | Description |
+|----------|-------------|
+| `isco08_code` | 4-digit ISCO-08 code |
+| `isco08_title` | Occupation title |
+| `oesch_class_num` | Oesch class scheme (numeric) |
+| `oesch_class_chr16` | Oesch 16-class scheme (character) |
+| `oesch_class_chr8` | Oesch 8-class scheme (character) |
+
+**Variables in `base_isco_detail()`:**
+
+| Variable | Description |
+|----------|-------------|
+| `isco08_code` | ISCO-08 code (1-4 digits) |
+| `n_digits` | Number of digits (1, 2, 3, or 4) |
+| `level` | Hierarchy level name |
+| `isco08_title` | Occupation title |
+| `definition` | ILO definition of the occupation |
+| `tasks_include` | Tasks typically included |
+| `included_occupations` | Example occupations included |
+| `excluded_occupations` | Occupations explicitly excluded |
+| `notes` | Additional notes |
+
+## SOC 2018 (U.S. Standard)
+
+The Standard Occupational Classification (SOC) 2018 is the current U.S. system with 867 detailed occupation codes. It provides a hierarchical structure:
+
+- **2-digit**: Major groups (e.g., "19-0000" = Life, Physical, and Social Science Occupations)
+- **3-digit**: Minor groups (e.g., "19-3000" = Social Scientists and Related Workers)
+- **5-digit**: Broad occupations (e.g., "19-3090" = Miscellaneous Social Scientists and Related Workers)
+- **6-digit**: Detailed occupations (e.g., "19-3094" = Political Scientists)
+
+```{r}
+# Load SOC 2018 (all levels)
+soc <- base_soc()
+head(soc)
+
+# Load only detailed (6-digit) occupations
+soc_detailed <- base_soc(level = "Detailed")
+```
+
+**Variables in `base_soc()`:**
+
+| Variable | Description |
+|----------|-------------|
+| `soc2018_code` | SOC 2018 code (format: XX-XXXX) |
+| `n_digits` | Number of digits (2, 3, 5, or 6) |
+| `soc_group` | Group level (Major, Minor, Broad, Detailed) |
+| `soc2018_title` | Occupation title |
+| `soc_definition` | BLS definition of the occupation |
+
+## Crosswalks
+
+The package provides crosswalks for bridging between classification systems.
+
+```{r}
+# ISCO-88 to ISCO-08 crosswalk
+isco_xwalk <- crosswalk_isco_88_08()
+head(isco_xwalk)
+
+# SOC 2010 to SOC 2018 crosswalk
+soc_xwalk <- crosswalk_soc_10_18()
+head(soc_xwalk)
+
+# ISCO-08 to SOC 2010 crosswalk
+isco_soc_xwalk <- crosswalk_isco_08_soc_10()
+head(isco_soc_xwalk)
+```
+
+> **Note:** Crosswalks often involve many-to-many relationships. A single ISCO-88 code may map to multiple ISCO-08 codes and vice versa. Similarly, ISCO-08 to SOC mappings are not one-to-one.
+
+# Risk Variables
+
+The package provides loaders for several occupation-level risk measures. Each loader displays citation information when called.
+
+## Automation and Technology Risk
+
+### Routine Task Intensity (Mihaylov et al. 2019)
+
+RTI (Routine Task Intensity) measures the susceptibility of occupations to automation based on task content. Higher values indicate more routine-intensive work.
+
+```{r}
+# Load RTI data 
+rti <- load_rti()
+head(rti)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `rti_mihaylov_2019` | Routine Task Intensity index (main measure) |
+| `nra` | Non-routine analytical tasks |
+| `nri` | Non-routine interpersonal tasks |
+| `rc` | Routine cognitive tasks |
+| `rm` | Routine manual tasks |
+| `nrm` | Non-routine manual tasks |
+
+**Source**: @mihaylov2019measuring
+
+### AI Occupational Exposure (Felten et al. 2021)
+
+AIOE measures the exposure of occupations to artificial intelligence technologies.
+
+```{r}
+# Load AIOE data (Felten et al.)
+aioe <- load_aioe()
+head(aioe)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `AIOE` | AI Occupational Exposure score |
+
+**Source**: @felten2021occupational
+
+### Computerization Probability (Frey and Osborne 2017)
+
+Probability of computerization based on task characteristics, from Frey & Osborne's influential study.
+
+```{r}
+# Load computerization risk (SOC 2010 codes)
+comp <- load_computerization()
+head(comp)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `computerization_risk` | Probability of computerization (0-1) |
+
+**Source**: @frey2017future
+
+## Globalization Risk
+
+### Offshorability (Blinder 2007)
+
+Measures the potential for jobs to be moved offshore based on task content.
+
+```{r}
+# Load offshorability (Blinder 2007)
+offsh <- load_offshorability()
+head(offsh)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `offshorability_index` | Offshorability score |
+
+**Source**: @blinder2007many
+
+### RTI and Offshorability (Mahutga et al. 2018)
+
+Country-year specific measures of routine task intensity and offshorability.
+
+```{r}
+# Load aggregated data (mean across countries/years)
+mahutga_agg <- load_mahutga(aggregate = "by_isco")
+head(mahutga_agg)
+
+# Load granular country-year data
+mahutga_full <- load_mahutga(aggregate = "none")
+
+# Filter to specific countries and years
+mahutga_subset <- load_mahutga(
+  aggregate = "none",
+  countries = c("DE", "NL"),
+  years = c(2010, 2013)
+)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `rti_score` | Routine Task Intensity score |
+| `offs_score` | Offshorability score |
+| `country` | Country code (when `aggregate = "none"`) |
+| `year` | Year (when `aggregate = "none"`) |
+
+**Source**: @mahutga2018job
+
+### Skill Specificity (Pardos-Prado and Xena 2019)
+
+Measures how specific (vs. general) an occupation's skill requirements are, affecting labor market mobility and vulnerability to economic shocks.
+
+```{r}
+# Load aggregated skill specificity
+ss_agg <- load_skill_specificity(aggregate = "by_isco")
+head(ss_agg)
+
+# Load country-wave specific data
+ss_full <- load_skill_specificity(aggregate = "none")
+
+# Filter to specific ESS waves
+ss_wave5 <- load_skill_specificity(wave = 5)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `skill_specificity` | Skill specificity score (higher = more specific) |
+| `country` | Country code (when `aggregate = "none"`) |
+| `ess_wave` | ESS wave 1-5 (when `aggregate = "none"`) |
+
+**Source**: @pardos2019skill
+
+> **Note:** RTI / Offshorability (Mahutga), and Skill specificity (Pardos-Prado and Xena) data use **ISCO-88** codes. Use `crosswalk_isco_88_08()` to bridge to ISCO-08.
+
+## Green Transition Risk
+
+### Greenness and Brownness (Cavallotti et al. 2025)
+
+Measures exposure to environmental policy changes in the transition to a low-carbon economy.
+
+- **Greenness**: Occupations that may benefit from green policies
+- **Brownness**: Occupations that may be negatively affected
+
+```{r}
+# Load greenness/brownness data
+brown <- load_brownness()
+head(brown)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `greenness` | Greenness score |
+| `brownness` | Brownness score |
+| `brown_dummy` | Binary indicator (1 = Brown occupation) |
+
+**Source**: @cavallotti2025green
+
+### Greenness and Brownness (Scholl et al. 2023)
+
+Provides occupation-level measures of exposure to the green transition for 119 ISCO-08 4-digit occupations. **Greenness** scores indicate the share of "environmentally friendly" (task-based) job content crosswalked from 8-digit SOC codes via Vona et al. (2018). **Brownness** scores indicate the share of "polluting" (industry-based) job content crosswalked from 6-digit SOC codes.
+
+The dataset also includes "ambiguous grey" occupations which exhibit both green and brown characteristics.
+
+```{r}
+# Load Scholl/Turban/Gal greenness & brownness
+scholl <- load_scholl_green_brown()
+head(scholl)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `greenness` | Share of green 6-digit SOC codes in the 4-digit ISCO code (employment weighted) |
+| `greenness_uw` | Greenness share with uniform weighting across SOC codes |
+| `emp_uw_brown_6d` | Share of employees in brown 6-digit SOC codes (uniform weighting) |
+| `share_brown_6d` | Share of brown 6-digit SOC codes in the 4-digit ISCO code |
+
+**Source**: @scholl2023green
+
+## Other Occupational Characteristics
+
+### Occupational Prestige (Hughes et al. 2024)
+
+Occupational prestige scores measuring the status component of socioeconomic status.
+
+```{r}
+# Load prestige scores
+prestige <- load_prestige()
+head(prestige)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|----------|-------------|
+| `OPR_prestige_score` | Occupational Prestige Rating score |
+| `OPR_field_code` | Occupational field code |
+| `OPR_field_title` | Occupational field title |
+| `OPR_field_rating` | Field-level prestige rating |
+| `GSS_Ratings_1989` | General Social Survey ratings (1989) |
+| `GSS_Ratings_2012` | General Social Survey ratings (2012) |
+
+**Source**: @hughes2024occupational
+
+### Hazardous Working Conditions (O*NET)
+
+Measures exposure to hazardous work contexts from O*NET.
+
+```{r}
+# Load hazard data
+hazard <- load_hazard()
+head(hazard)
+```
+
+> **O\*NET-SOC vs SOC 2018 Codes:** O\*NET uses 8-digit codes (e.g., "47-2152.04") that are more granular than standard 6-digit SOC 2018 codes (e.g., "47-2152"). For example, SOC code 47-2152 (Plumbers, Pipefitters, and Steamfitters) has multiple O\*NET sub-codes with different hazard scores.
+>
+> To merge with standard SOC 2018 data, extract the first 7 characters and aggregate:
+
+```{r}
+hazard <- load_hazard()
+hazard$soc2018_code <- substr(hazard$onet_soc2018_code, 1, 7)
+hazard_agg <- hazard |>
+  dplyr::group_by(soc2018_code) |>
+  dplyr::summarize(
+    hazard_context = mean(hazard_context, na.rm = TRUE),
+    n_onet_codes = dplyr::n()
+  )
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|------|-----------------|
+| `onet_soc2018_code` | 8-digit O\*NET-SOC code (more granular than SOC 2018) |
+| `onet_soc2018_title` | O\*NET occupation title |
+| `hazard_context` | Hazardous work context score (0-100) |
+| `job_zone` | O\*NET Job Zone (1-5, indicating preparation level) |
+
+**Hazard Context Scale:**
+
+- 100 = Exposure every day
+- 75 = Once a week or more
+- 50 = Once a month or more
+- 25 = Once a year or more
+- 0 = Never
+
+**Job Zone Categories:**
+
+| Zone | Preparation Level | Typical Education | Examples |
+|----|-----------|-------------|-----------------------|
+| 1 | Little or None | High school/GED | Dishwashers, baristas |
+| 2 | Some | High school + training | Tellers, security guards |
+| 3 | Medium | Vocational/Associate's | Electricians, barbers |
+| 4 | Considerable | Bachelor's degree | Database admins, graphic designers |
+| 5 | Extensive | Graduate degree | Lawyers, surgeons, pharmacists |
+
+**Source**: @onet2024
+
+### Employment Projections (BLS)
+
+U.S. Bureau of Labor Statistics employment projections for 2024-2034.
+
+```{r}
+# Load BLS projections
+emp <- load_employment_projections()
+head(emp)
+
+# Explore employment change
+emp %>%
+  arrange(desc(employment_change_24to34_percent)) %>%
+  select(soc2018_code, soc2018_title, 
+         employment_change_24to34_percent, 
+         median_annual_wage_2024) %>%
+  head(10)
+```
+
+**Key Variables:**
+
+| Variable | Description |
+|--------------|-------------|
+| `employment_2024_thousands` | Employment level in 2024 (thousands) |
+| `employment_2034_thousands` | Projected employment in 2034 (thousands) |
+| `employment_change_24to34_thousands` | Absolute change 2024-2034 |
+| `employment_change_24to34_percent` | Percent change 2024-2034 |
+| `median_annual_wage_2024` | Median annual wage in 2024 (top-coded at $239,200) |
+| `typical_entry_level_edu` | Typical education required |
+| `work_experience_in_a_related_occupation` | Work experience requirements |
+| `typical_ojt` | Typical on-the-job training |
+
+**Source**: @bls2024projections
+
+
+# Analysis Functions
+
+The package provides utility functions for common analytical tasks.
+
+## Ranking Occupations
+
+Use `get_top_bottom_occupations()` to find the highest and lowest ranked occupations by any risk variable.
+  
+```{r}
+# Combine data
+merged <- base_isco() %>%
+  left_join(load_rti(), by = "isco08_code") %>%
+  left_join(load_brownness(), by = "isco08_code")
+
+# Get top 10 and bottom 10 by automation risk
+ranked <- get_top_bottom_occupations(
+  merged,
+  var = "rti_mihaylov_2019",
+  n = 10
+)
+print(ranked)
+```
+
+You can also analyze rankings within major occupation groups:
+
+```{r}
+# Top 3 within each 1-digit ISCO group
+ranked_by_group <- get_top_bottom_occupations(
+  merged,
+  var = "brownness",
+  n = 3,
+  by_group = 1
+)
+print(ranked_by_group)
+```
+
+## Summarizing by Occupation Groups
+
+Use `summarize_risks()` to calculate summary statistics by ISCO prefix levels.
+
+```{r}
+# Summarize by 2-digit ISCO groups
+summary_2dig <- summarize_risks(
+  merged,
+  vars = c("rti_mihaylov_2019", "brownness", "greenness"),
+  isco_key = "isco08_code"
+)
+head(summary_2dig)
+```
+
+## Looking Up Occupation Information
+
+Use `lookup_isco()` to retrieve occupation details from codes.
+
+```{r}
+# Look up occupation titles
+titles <- lookup_isco(
+  base_isco(),
+  lookup_values = c("1111", "2111", "3111"),
+  lookup_col = "isco08_code",
+  return_col = "isco08_title"
+)
+print(titles)
+```
+
+## Imputing Missing Values
+
+Use `impute_by_isco()` to fill missing values using ISCO hierarchy (3-digit, then 2-digit averages).
+
+```{r}
+# Create sample data with brownness values
+data <- base_isco() %>%
+  left_join(load_brownness(), by = "isco08_code")
+
+# Impute missing brownness values
+imputed <- impute_by_isco(
+  data,
+  var = "brownness",
+  new_var = "brownness_i",
+  isco_key = "isco08_code"
+)
+
+# Check imputation levels
+table(imputed$brownness_i_impute_level)
+# 0 = original value, 2 = imputed from 2-digit, 3 = imputed from 3-digit
+```
+
+For SOC-coded data, use `impute_by_soc()` which follows the SOC hierarchy.
+
+```{r}
+# Impute missing wage values in employment projections
+emp <- load_employment_projections()
+emp_imputed <- impute_by_soc(
+  emp,
+  var = "median_annual_wage_2024",
+  new_var = "wage_i",
+  soc_key = "soc2018_code"
+)
+
+# Check imputation levels
+table(emp_imputed$wage_i_impute_level)
+# 0 = original, 2 = from Major Group, 3 = from Minor Group, 5 = from Broad Occupation
+```
+
+# Common Workflows
+
+## Workflow 1: Analyzing Automation Risk by Sector
+
+```{r}
+# Load and merge data
+data <- base_isco() %>%
+  left_join(load_rti(), by = "isco08_code")
+
+# Add 1-digit major group
+data <- data %>%
+  mutate(major_group = substr(isco08_code, 1, 1))
+
+# Summarize by major group
+data %>%
+  group_by(major_group) %>%
+  summarize(
+    mean_rti = mean(rti_mihaylov_2019, na.rm = TRUE),
+    sd_rti = sd(rti_mihaylov_2019, na.rm = TRUE),
+    n = n()
+  ) %>%
+  arrange(desc(mean_rti))
+```
+
+## Workflow 2: Identifying At-Risk Occupations
+
+Find occupations with high automation risk AND high brownness (double jeopardy):
+
+```{r}
+# Load and merge
+data <- base_isco() %>%
+  left_join(load_rti(), by = "isco08_code") %>%
+  left_join(load_brownness(), by = "isco08_code")
+
+# Calculate percentiles
+data <- data %>%
+  mutate(
+    rti_pctl = percent_rank(rti_mihaylov_2019) * 100,
+    brown_pctl = percent_rank(brownness) * 100
+  )
+
+# Find double jeopardy occupations (top 30% on both)
+double_risk <- data %>%
+  filter(rti_pctl >= 70 & brown_pctl >= 70) %>%
+  arrange(desc(rti_pctl + brown_pctl)) %>%
+  select(isco08_code, isco08_title, rti_mihaylov_2019, brownness, 
+         rti_pctl, brown_pctl)
+
+head(double_risk, 15)
+```
+
+## Workflow 3: Cross-Country Comparison
+
+Using country-specific skill specificity data:
+
+```{r}
+# Load country-level data
+ss <- load_skill_specificity(aggregate = "none")
+
+# Compare skill specificity across countries
+country_summary <- ss %>%
+  group_by(country) %>%
+  summarize(
+    mean_ss = mean(skill_specificity, na.rm = TRUE),
+    median_ss = median(skill_specificity, na.rm = TRUE),
+    n_occupations = n_distinct(isco88_code)
+  ) %>%
+  arrange(desc(mean_ss))
+
+head(country_summary)
+```
+
+## Workflow 4: Bridging ISCO-88 to ISCO-08
+
+When working with data in different classification systems:
+
+```{r}
+# Load ISCO-88 data (skill specificity)
+ss <- load_skill_specificity(aggregate = "by_isco")
+
+# Load crosswalk
+xwalk <- crosswalk_isco_88_08()
+
+# Bridge to ISCO-08
+ss_isco08 <- ss %>%
+  left_join(xwalk, by = "isco88_code") %>%
+  # Handle many-to-many by taking mean
+  group_by(isco08_code) %>%
+  summarize(skill_specificity = mean(skill_specificity, na.rm = TRUE))
+
+# Now merge with ISCO-08 data
+data <- base_isco() %>%
+  left_join(ss_isco08, by = "isco08_code")
+```
+
+# Function Reference
+
+## Data Loaders
+
+| Function | Description | Classification |
+|----------------------|-------------------------|----------|
+| `base_isco()` | ISCO-08 baseline (427 codes) | ISCO-08 |
+| `base_isco_detail()` | Full ISCO-08 structure with definitions | ISCO-08 |
+| `base_soc()` | SOC 2018 occupations (867 codes) | SOC 2018 |
+| `load_rti()` | Routine Task Intensity | ISCO-08 |
+| `load_aioe()` | AI Occupational Exposure | SOC 2018 |
+| `load_computerization()` | Computerization probability | SOC 2010 |
+| `load_offshorability()` | Offshorability index | SOC 2010 |
+| `load_mahutga()` | RTI/Offshorability (country-year) | ISCO-88 |
+| `load_skill_specificity()` | Skill specificity (country-year) | ISCO-88 |
+| `load_brownness()` | Greenness/Brownness (Cavallotti et al.) | ISCO-08 |
+| `load_scholl_green_brown()` | Greenness/Brownness (Scholl et al. 2023) | ISCO-08 |
+| `load_prestige()` | Occupational prestige | SOC 2018 |
+| `load_hazard()` | Hazardous conditions | SOC 2018 |
+| `load_employment_projections()` | BLS 2024-34 projections | SOC 2018 |
+
+## Crosswalks
+
+| Function | Description |
+|----------|-------------|
+| `crosswalk_isco_88_08()` | ISCO-88 to ISCO-08 |
+| `crosswalk_isco_08_soc_10()` | ISCO-08 to SOC 2010 |
+| `crosswalk_soc_10_18()` | SOC 2010 to SOC 2018 |
+
+## Analysis Utilities
+
+| Function | Description |
+|----------|-------------|
+| `get_top_bottom_occupations()` | Rank occupations by variable |
+| `summarize_risks()` | Summary stats by ISCO prefix |
+| `lookup_isco()` | Look up occupation information |
+| `impute_by_isco()` | Impute missing values by ISCO hierarchy |
+| `impute_by_soc()` | Impute missing values by SOC hierarchy |
+
+# Citation
+
+If you use this package in your research, please cite the original data sources as indicated by each loader function, as well as the package itself:
+
+```
+@Manual{occupationRiskPack,
+  title = {occupationRiskPack: Occupation-Level Risk Data for Research},
+  author = {Jaewook Lee},
+  year = {2026},
+  note = {R package version 0.1.0},
+  url = {https://github.com/jwklee/occupationRiskPack}
+}
+```
+
+# References
