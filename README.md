@@ -168,7 +168,7 @@ All data sources are documented in `inst/COPYRIGHTS`. The package includes data 
 If you use this package in research, please cite:
 
 ```
-Lee, J. (2025). occupationRiskPack: Occupation-Level Risk Data for Labor Market Research. 
+Lee, J. (2026). occupationRiskPack: Occupation-Level Risk Data for Research. 
 R package version 0.1.0. https://github.com/jwklee/occupationRiskPack
 ```
 
