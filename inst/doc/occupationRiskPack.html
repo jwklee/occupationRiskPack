@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Jaewook Lee" />
+
+<meta name="date" content="2026-01-06" />
+
+<title>occupationRiskPack: A Comprehensive Guide</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">occupationRiskPack: A Comprehensive
+Guide</h1>
+<h4 class="author">Jaewook Lee</h4>
+<h4 class="date">2026-01-06</h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a>
+<ul>
+<li><a href="#key-features" id="toc-key-features">Key Features</a></li>
+<li><a href="#installation" id="toc-installation">Installation</a></li>
+</ul></li>
+<li><a href="#occupation-classification-systems" id="toc-occupation-classification-systems">Occupation Classification
+Systems</a>
+<ul>
+<li><a href="#isco-08-international-standard" id="toc-isco-08-international-standard">ISCO-08 (International
+Standard)</a></li>
+<li><a href="#soc-2018-u.s.-standard" id="toc-soc-2018-u.s.-standard">SOC 2018 (U.S. Standard)</a></li>
+<li><a href="#crosswalks" id="toc-crosswalks">Crosswalks</a></li>
+</ul></li>
+<li><a href="#risk-variables" id="toc-risk-variables">Risk Variables</a>
+<ul>
+<li><a href="#automation-and-technology-risk" id="toc-automation-and-technology-risk">Automation and Technology
+Risk</a>
+<ul>
+<li><a href="#routine-task-intensity-mihaylov-et-al.-2019" id="toc-routine-task-intensity-mihaylov-et-al.-2019">Routine Task
+Intensity (Mihaylov et al. 2019)</a></li>
+<li><a href="#ai-occupational-exposure-felten-et-al.-2021" id="toc-ai-occupational-exposure-felten-et-al.-2021">AI Occupational
+Exposure (Felten et al. 2021)</a></li>
+<li><a href="#computerization-probability-frey-and-osborne-2017" id="toc-computerization-probability-frey-and-osborne-2017">Computerization
+Probability (Frey and Osborne 2017)</a></li>
+</ul></li>
+<li><a href="#globalization-risk" id="toc-globalization-risk">Globalization Risk</a>
+<ul>
+<li><a href="#offshorability-blinder-2007" id="toc-offshorability-blinder-2007">Offshorability (Blinder
+2007)</a></li>
+<li><a href="#rti-and-offshorability-mahutga-et-al.-2018" id="toc-rti-and-offshorability-mahutga-et-al.-2018">RTI and
+Offshorability (Mahutga et al. 2018)</a></li>
+<li><a href="#skill-specificity-pardos-prado-and-xena-2019" id="toc-skill-specificity-pardos-prado-and-xena-2019">Skill Specificity
+(Pardos-Prado and Xena 2019)</a></li>
+</ul></li>
+<li><a href="#green-transition-risk" id="toc-green-transition-risk">Green Transition Risk</a>
+<ul>
+<li><a href="#greenness-and-brownness-cavallotti-et-al.-2025" id="toc-greenness-and-brownness-cavallotti-et-al.-2025">Greenness and
+Brownness (Cavallotti et al. 2025)</a></li>
+<li><a href="#greenness-and-brownness-scholl-et-al.-2023" id="toc-greenness-and-brownness-scholl-et-al.-2023">Greenness and
+Brownness (Scholl et al. 2023)</a></li>
+</ul></li>
+<li><a href="#other-occupational-characteristics" id="toc-other-occupational-characteristics">Other Occupational
+Characteristics</a>
+<ul>
+<li><a href="#occupational-prestige-hughes-et-al.-2024" id="toc-occupational-prestige-hughes-et-al.-2024">Occupational Prestige
+(Hughes et al. 2024)</a></li>
+<li><a href="#hazardous-working-conditions-onet" id="toc-hazardous-working-conditions-onet">Hazardous Working Conditions
+(O*NET)</a></li>
+<li><a href="#employment-projections-bls" id="toc-employment-projections-bls">Employment Projections
+(BLS)</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#analysis-functions" id="toc-analysis-functions">Analysis
+Functions</a>
+<ul>
+<li><a href="#ranking-occupations" id="toc-ranking-occupations">Ranking
+Occupations</a></li>
+<li><a href="#summarizing-by-occupation-groups" id="toc-summarizing-by-occupation-groups">Summarizing by Occupation
+Groups</a></li>
+<li><a href="#looking-up-occupation-information" id="toc-looking-up-occupation-information">Looking Up Occupation
+Information</a></li>
+<li><a href="#imputing-missing-values" id="toc-imputing-missing-values">Imputing Missing Values</a></li>
+</ul></li>
+<li><a href="#common-workflows" id="toc-common-workflows">Common
+Workflows</a>
+<ul>
+<li><a href="#workflow-1-analyzing-automation-risk-by-sector" id="toc-workflow-1-analyzing-automation-risk-by-sector">Workflow 1:
+Analyzing Automation Risk by Sector</a></li>
+<li><a href="#workflow-2-identifying-at-risk-occupations" id="toc-workflow-2-identifying-at-risk-occupations">Workflow 2:
+Identifying At-Risk Occupations</a></li>
+<li><a href="#workflow-3-cross-country-comparison" id="toc-workflow-3-cross-country-comparison">Workflow 3: Cross-Country
+Comparison</a></li>
+<li><a href="#workflow-4-bridging-isco-88-to-isco-08" id="toc-workflow-4-bridging-isco-88-to-isco-08">Workflow 4: Bridging
+ISCO-88 to ISCO-08</a></li>
+</ul></li>
+<li><a href="#function-reference" id="toc-function-reference">Function
+Reference</a>
+<ul>
+<li><a href="#data-loaders" id="toc-data-loaders">Data Loaders</a></li>
+<li><a href="#crosswalks-1" id="toc-crosswalks-1">Crosswalks</a></li>
+<li><a href="#analysis-utilities" id="toc-analysis-utilities">Analysis
+Utilities</a></li>
+</ul></li>
+<li><a href="#citation" id="toc-citation">Citation</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The <strong>occupationRiskPack</strong> package provides a unified
+interface for accessing and analyzing occupation-level risk variables
+commonly used in labor economics, political economy, and sociological
+research. The package consolidates data from multiple authoritative
+sources into a consistent framework built around standardized occupation
+classification systems.</p>
+<div id="key-features" class="section level2">
+<h2>Key Features</h2>
+<ul>
+<li><strong>Standardized occupation codes</strong>: All data is
+organized by ISCO (International Standard Classification of Occupations)
+or SOC (Standard Occupational Classification) codes</li>
+<li><strong>Multiple risk dimensions</strong>: Automation risk,
+offshorability, skill specificity, environmental exposure, and more</li>
+<li><strong>Cross-classification support</strong>: Crosswalks between
+ISCO-88, ISCO-08, SOC 2010, and SOC 2018</li>
+<li><strong>Analysis utilities</strong>: Functions for ranking
+occupations, summarizing by occupation groups, and imputing missing
+values</li>
+<li><strong>Proper citations</strong>: Each data loader displays source
+information to facilitate proper attribution</li>
+</ul>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Install from GitHub (when available)</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;jwklee/occupationRiskPack&quot;)</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Or install from CRAN (when available)</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co"># install.packages(&quot;occupationRiskPack&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Load the package</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(occupationRiskPack)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+</div>
+</div>
+<div id="occupation-classification-systems" class="section level1">
+<h1>Occupation Classification Systems</h1>
+<p>The package supports multiple occupation classification systems.
+Understanding these systems is essential for merging data across
+sources.</p>
+<blockquote>
+<p><strong>Important:</strong> When merging data from different sources
+using ISCO or SOC codes, occupation titles may vary slightly between
+datasets. <strong>Use CODES (e.g., ‘isco08_code’ or ‘soc2018_code’) as
+the merge key</strong>, not occupation titles.</p>
+</blockquote>
+<div id="isco-08-international-standard" class="section level2">
+<h2>ISCO-08 (International Standard)</h2>
+<p>ISCO-08 is the primary classification system used in this package. It
+provides a hierarchical structure:</p>
+<ul>
+<li><strong>1-digit</strong>: Major groups (e.g., “1” = Managers)</li>
+<li><strong>2-digit</strong>: Sub-major groups (e.g., “11” = Chief
+Executives, Senior Officials and Legislators)</li>
+<li><strong>3-digit</strong>: Minor groups (e.g., “111” = Legislators
+and Senior Officials)</li>
+<li><strong>4-digit</strong>: Unit groups (e.g., “1111” =
+Legislators)</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># Load the baseline ISCO-08 table (427 4-digit codes)</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>isco <span class="ot">&lt;-</span> <span class="fu">base_isco</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">head</span>(isco)</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co"># Load detailed ISCO-08 structure with definitions</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>isco_detail <span class="ot">&lt;-</span> <span class="fu">base_isco_detail</span>()</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="fu">head</span>(isco_detail)</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co"># Filter to specific level</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>isco_2digit <span class="ot">&lt;-</span> <span class="fu">base_isco_detail</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><strong>Variables in <code>base_isco()</code>:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>isco08_code</code></td>
+<td>4-digit ISCO-08 code</td>
+</tr>
+<tr class="even">
+<td><code>isco08_title</code></td>
+<td>Occupation title</td>
+</tr>
+<tr class="odd">
+<td><code>oesch_class_num</code></td>
+<td>Oesch class scheme (numeric)</td>
+</tr>
+<tr class="even">
+<td><code>oesch_class_chr16</code></td>
+<td>Oesch 16-class scheme (character)</td>
+</tr>
+<tr class="odd">
+<td><code>oesch_class_chr8</code></td>
+<td>Oesch 8-class scheme (character)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variables in <code>base_isco_detail()</code>:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>isco08_code</code></td>
+<td>ISCO-08 code (1-4 digits)</td>
+</tr>
+<tr class="even">
+<td><code>n_digits</code></td>
+<td>Number of digits (1, 2, 3, or 4)</td>
+</tr>
+<tr class="odd">
+<td><code>level</code></td>
+<td>Hierarchy level name</td>
+</tr>
+<tr class="even">
+<td><code>isco08_title</code></td>
+<td>Occupation title</td>
+</tr>
+<tr class="odd">
+<td><code>definition</code></td>
+<td>ILO definition of the occupation</td>
+</tr>
+<tr class="even">
+<td><code>tasks_include</code></td>
+<td>Tasks typically included</td>
+</tr>
+<tr class="odd">
+<td><code>included_occupations</code></td>
+<td>Example occupations included</td>
+</tr>
+<tr class="even">
+<td><code>excluded_occupations</code></td>
+<td>Occupations explicitly excluded</td>
+</tr>
+<tr class="odd">
+<td><code>notes</code></td>
+<td>Additional notes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="soc-2018-u.s.-standard" class="section level2">
+<h2>SOC 2018 (U.S. Standard)</h2>
+<p>The Standard Occupational Classification (SOC) 2018 is the current
+U.S. system with 867 detailed occupation codes. It provides a
+hierarchical structure:</p>
+<ul>
+<li><strong>2-digit</strong>: Major groups (e.g., “19-0000” = Life,
+Physical, and Social Science Occupations)</li>
+<li><strong>3-digit</strong>: Minor groups (e.g., “19-3000” = Social
+Scientists and Related Workers)</li>
+<li><strong>5-digit</strong>: Broad occupations (e.g., “19-3090” =
+Miscellaneous Social Scientists and Related Workers)</li>
+<li><strong>6-digit</strong>: Detailed occupations (e.g., “19-3094” =
+Political Scientists)</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Load SOC 2018 (all levels)</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>soc <span class="ot">&lt;-</span> <span class="fu">base_soc</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">head</span>(soc)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Load only detailed (6-digit) occupations</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>soc_detailed <span class="ot">&lt;-</span> <span class="fu">base_soc</span>(<span class="at">level =</span> <span class="st">&quot;Detailed&quot;</span>)</span></code></pre></div>
+<p><strong>Variables in <code>base_soc()</code>:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>soc2018_code</code></td>
+<td>SOC 2018 code (format: XX-XXXX)</td>
+</tr>
+<tr class="even">
+<td><code>n_digits</code></td>
+<td>Number of digits (2, 3, 5, or 6)</td>
+</tr>
+<tr class="odd">
+<td><code>soc_group</code></td>
+<td>Group level (Major, Minor, Broad, Detailed)</td>
+</tr>
+<tr class="even">
+<td><code>soc2018_title</code></td>
+<td>Occupation title</td>
+</tr>
+<tr class="odd">
+<td><code>soc_definition</code></td>
+<td>BLS definition of the occupation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="crosswalks" class="section level2">
+<h2>Crosswalks</h2>
+<p>The package provides crosswalks for bridging between classification
+systems.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># ISCO-88 to ISCO-08 crosswalk</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>isco_xwalk <span class="ot">&lt;-</span> <span class="fu">crosswalk_isco_88_08</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="fu">head</span>(isco_xwalk)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="co"># SOC 2010 to SOC 2018 crosswalk</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>soc_xwalk <span class="ot">&lt;-</span> <span class="fu">crosswalk_soc_10_18</span>()</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="fu">head</span>(soc_xwalk)</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="co"># ISCO-08 to SOC 2010 crosswalk</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>isco_soc_xwalk <span class="ot">&lt;-</span> <span class="fu">crosswalk_isco_08_soc_10</span>()</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="fu">head</span>(isco_soc_xwalk)</span></code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Crosswalks often involve many-to-many
+relationships. A single ISCO-88 code may map to multiple ISCO-08 codes
+and vice versa. Similarly, ISCO-08 to SOC mappings are not
+one-to-one.</p>
+</blockquote>
+</div>
+</div>
+<div id="risk-variables" class="section level1">
+<h1>Risk Variables</h1>
+<p>The package provides loaders for several occupation-level risk
+measures. Each loader displays citation information when called.</p>
+<div id="automation-and-technology-risk" class="section level2">
+<h2>Automation and Technology Risk</h2>
+<div id="routine-task-intensity-mihaylov-et-al.-2019" class="section level3">
+<h3>Routine Task Intensity (Mihaylov et al. 2019)</h3>
+<p>RTI (Routine Task Intensity) measures the susceptibility of
+occupations to automation based on task content. Higher values indicate
+more routine-intensive work.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># Load RTI data </span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>rti <span class="ot">&lt;-</span> <span class="fu">load_rti</span>()</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">head</span>(rti)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rti_mihaylov_2019</code></td>
+<td>Routine Task Intensity index (main measure)</td>
+</tr>
+<tr class="even">
+<td><code>nra</code></td>
+<td>Non-routine analytical tasks</td>
+</tr>
+<tr class="odd">
+<td><code>nri</code></td>
+<td>Non-routine interpersonal tasks</td>
+</tr>
+<tr class="even">
+<td><code>rc</code></td>
+<td>Routine cognitive tasks</td>
+</tr>
+<tr class="odd">
+<td><code>rm</code></td>
+<td>Routine manual tasks</td>
+</tr>
+<tr class="even">
+<td><code>nrm</code></td>
+<td>Non-routine manual tasks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Mihaylov and Tijdens
+(2019)</span></p>
+</div>
+<div id="ai-occupational-exposure-felten-et-al.-2021" class="section level3">
+<h3>AI Occupational Exposure (Felten et al. 2021)</h3>
+<p>AIOE measures the exposure of occupations to artificial intelligence
+technologies.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Load AIOE data (Felten et al.)</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>aioe <span class="ot">&lt;-</span> <span class="fu">load_aioe</span>()</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">head</span>(aioe)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>AIOE</code></td>
+<td>AI Occupational Exposure score</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Felten et al.
+(2021)</span></p>
+</div>
+<div id="computerization-probability-frey-and-osborne-2017" class="section level3">
+<h3>Computerization Probability (Frey and Osborne 2017)</h3>
+<p>Probability of computerization based on task characteristics, from
+Frey &amp; Osborne’s influential study.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Load computerization risk (SOC 2010 codes)</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>comp <span class="ot">&lt;-</span> <span class="fu">load_computerization</span>()</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="fu">head</span>(comp)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>computerization_risk</code></td>
+<td>Probability of computerization (0-1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Frey and Osborne
+(2017)</span></p>
+</div>
+</div>
+<div id="globalization-risk" class="section level2">
+<h2>Globalization Risk</h2>
+<div id="offshorability-blinder-2007" class="section level3">
+<h3>Offshorability (Blinder 2007)</h3>
+<p>Measures the potential for jobs to be moved offshore based on task
+content.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># Load offshorability (Blinder 2007)</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>offsh <span class="ot">&lt;-</span> <span class="fu">load_offshorability</span>()</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">head</span>(offsh)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>offshorability_index</code></td>
+<td>Offshorability score</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Blinder
+(2007)</span></p>
+</div>
+<div id="rti-and-offshorability-mahutga-et-al.-2018" class="section level3">
+<h3>RTI and Offshorability (Mahutga et al. 2018)</h3>
+<p>Country-year specific measures of routine task intensity and
+offshorability.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Load aggregated data (mean across countries/years)</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>mahutga_agg <span class="ot">&lt;-</span> <span class="fu">load_mahutga</span>(<span class="at">aggregate =</span> <span class="st">&quot;by_isco&quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">head</span>(mahutga_agg)</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co"># Load granular country-year data</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>mahutga_full <span class="ot">&lt;-</span> <span class="fu">load_mahutga</span>(<span class="at">aggregate =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co"># Filter to specific countries and years</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>mahutga_subset <span class="ot">&lt;-</span> <span class="fu">load_mahutga</span>(</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>  <span class="at">aggregate =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>  <span class="at">countries =</span> <span class="fu">c</span>(<span class="st">&quot;DE&quot;</span>, <span class="st">&quot;NL&quot;</span>),</span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>  <span class="at">years =</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2013</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rti_score</code></td>
+<td>Routine Task Intensity score</td>
+</tr>
+<tr class="even">
+<td><code>offs_score</code></td>
+<td>Offshorability score</td>
+</tr>
+<tr class="odd">
+<td><code>country</code></td>
+<td>Country code (when <code>aggregate = &quot;none&quot;</code>)</td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>Year (when <code>aggregate = &quot;none&quot;</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Mahutga et al.
+(2018)</span></p>
+</div>
+<div id="skill-specificity-pardos-prado-and-xena-2019" class="section level3">
+<h3>Skill Specificity (Pardos-Prado and Xena 2019)</h3>
+<p>Measures how specific (vs. general) an occupation’s skill
+requirements are, affecting labor market mobility and vulnerability to
+economic shocks.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Load aggregated skill specificity</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>ss_agg <span class="ot">&lt;-</span> <span class="fu">load_skill_specificity</span>(<span class="at">aggregate =</span> <span class="st">&quot;by_isco&quot;</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">head</span>(ss_agg)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co"># Load country-wave specific data</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>ss_full <span class="ot">&lt;-</span> <span class="fu">load_skill_specificity</span>(<span class="at">aggregate =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="co"># Filter to specific ESS waves</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>ss_wave5 <span class="ot">&lt;-</span> <span class="fu">load_skill_specificity</span>(<span class="at">wave =</span> <span class="dv">5</span>)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<colgroup>
+<col width="43%" />
+<col width="56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>skill_specificity</code></td>
+<td>Skill specificity score (higher = more specific)</td>
+</tr>
+<tr class="even">
+<td><code>country</code></td>
+<td>Country code (when <code>aggregate = &quot;none&quot;</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>ess_wave</code></td>
+<td>ESS wave 1-5 (when <code>aggregate = &quot;none&quot;</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Pardos-Prado and Xena
+(2019)</span></p>
+<blockquote>
+<p><strong>Note:</strong> RTI / Offshorability (Mahutga), and Skill
+specificity (Pardos-Prado and Xena) data use <strong>ISCO-88</strong>
+codes. Use <code>crosswalk_isco_88_08()</code> to bridge to ISCO-08.</p>
+</blockquote>
+</div>
+</div>
+<div id="green-transition-risk" class="section level2">
+<h2>Green Transition Risk</h2>
+<div id="greenness-and-brownness-cavallotti-et-al.-2025" class="section level3">
+<h3>Greenness and Brownness (Cavallotti et al. 2025)</h3>
+<p>Measures exposure to environmental policy changes in the transition
+to a low-carbon economy.</p>
+<ul>
+<li><strong>Greenness</strong>: Occupations that may benefit from green
+policies</li>
+<li><strong>Brownness</strong>: Occupations that may be negatively
+affected</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># Load greenness/brownness data</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>brown <span class="ot">&lt;-</span> <span class="fu">load_brownness</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">head</span>(brown)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>greenness</code></td>
+<td>Greenness score</td>
+</tr>
+<tr class="even">
+<td><code>brownness</code></td>
+<td>Brownness score</td>
+</tr>
+<tr class="odd">
+<td><code>brown_dummy</code></td>
+<td>Binary indicator (1 = Brown occupation)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Cavallotti et al.
+(2025)</span></p>
+</div>
+<div id="greenness-and-brownness-scholl-et-al.-2023" class="section level3">
+<h3>Greenness and Brownness (Scholl et al. 2023)</h3>
+<p>Provides occupation-level measures of exposure to the green
+transition for 119 ISCO-08 4-digit occupations.
+<strong>Greenness</strong> scores indicate the share of “environmentally
+friendly” (task-based) job content crosswalked from 8-digit SOC codes
+via Vona et al. (2018). <strong>Brownness</strong> scores indicate the
+share of “polluting” (industry-based) job content crosswalked from
+6-digit SOC codes.</p>
+<p>The dataset also includes “ambiguous grey” occupations which exhibit
+both green and brown characteristics.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># Load Scholl/Turban/Gal greenness &amp; brownness</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>scholl <span class="ot">&lt;-</span> <span class="fu">load_scholl_green_brown</span>()</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="fu">head</span>(scholl)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<colgroup>
+<col width="43%" />
+<col width="56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>greenness</code></td>
+<td>Share of green 6-digit SOC codes in the 4-digit ISCO code
+(employment weighted)</td>
+</tr>
+<tr class="even">
+<td><code>greenness_uw</code></td>
+<td>Greenness share with uniform weighting across SOC codes</td>
+</tr>
+<tr class="odd">
+<td><code>emp_uw_brown_6d</code></td>
+<td>Share of employees in brown 6-digit SOC codes (uniform
+weighting)</td>
+</tr>
+<tr class="even">
+<td><code>share_brown_6d</code></td>
+<td>Share of brown 6-digit SOC codes in the 4-digit ISCO code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Scholl et al.
+(2023)</span></p>
+</div>
+</div>
+<div id="other-occupational-characteristics" class="section level2">
+<h2>Other Occupational Characteristics</h2>
+<div id="occupational-prestige-hughes-et-al.-2024" class="section level3">
+<h3>Occupational Prestige (Hughes et al. 2024)</h3>
+<p>Occupational prestige scores measuring the status component of
+socioeconomic status.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Load prestige scores</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>prestige <span class="ot">&lt;-</span> <span class="fu">load_prestige</span>()</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="fu">head</span>(prestige)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>OPR_prestige_score</code></td>
+<td>Occupational Prestige Rating score</td>
+</tr>
+<tr class="even">
+<td><code>OPR_field_code</code></td>
+<td>Occupational field code</td>
+</tr>
+<tr class="odd">
+<td><code>OPR_field_title</code></td>
+<td>Occupational field title</td>
+</tr>
+<tr class="even">
+<td><code>OPR_field_rating</code></td>
+<td>Field-level prestige rating</td>
+</tr>
+<tr class="odd">
+<td><code>GSS_Ratings_1989</code></td>
+<td>General Social Survey ratings (1989)</td>
+</tr>
+<tr class="even">
+<td><code>GSS_Ratings_2012</code></td>
+<td>General Social Survey ratings (2012)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">Hughes et al.
+(2024)</span></p>
+</div>
+<div id="hazardous-working-conditions-onet" class="section level3">
+<h3>Hazardous Working Conditions (O*NET)</h3>
+<p>Measures exposure to hazardous work contexts from O*NET.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Load hazard data</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>hazard <span class="ot">&lt;-</span> <span class="fu">load_hazard</span>()</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="fu">head</span>(hazard)</span></code></pre></div>
+<blockquote>
+<p><strong>O*NET-SOC vs SOC 2018 Codes:</strong> O*NET uses 8-digit
+codes (e.g., “47-2152.04”) that are more granular than standard 6-digit
+SOC 2018 codes (e.g., “47-2152”). For example, SOC code 47-2152
+(Plumbers, Pipefitters, and Steamfitters) has multiple O*NET sub-codes
+with different hazard scores.</p>
+<p>To merge with standard SOC 2018 data, extract the first 7 characters
+and aggregate:</p>
+</blockquote>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>hazard <span class="ot">&lt;-</span> <span class="fu">load_hazard</span>()</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>hazard<span class="sc">$</span>soc2018_code <span class="ot">&lt;-</span> <span class="fu">substr</span>(hazard<span class="sc">$</span>onet_soc2018_code, <span class="dv">1</span>, <span class="dv">7</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>hazard_agg <span class="ot">&lt;-</span> hazard <span class="sc">|&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(soc2018_code) <span class="sc">|&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarize</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>    <span class="at">hazard_context =</span> <span class="fu">mean</span>(hazard_context, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>    <span class="at">n_onet_codes =</span> dplyr<span class="sc">::</span><span class="fu">n</span>()</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>  )</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>onet_soc2018_code</code></td>
+<td>8-digit O*NET-SOC code (more granular than SOC 2018)</td>
+</tr>
+<tr class="even">
+<td><code>onet_soc2018_title</code></td>
+<td>O*NET occupation title</td>
+</tr>
+<tr class="odd">
+<td><code>hazard_context</code></td>
+<td>Hazardous work context score (0-100)</td>
+</tr>
+<tr class="even">
+<td><code>job_zone</code></td>
+<td>O*NET Job Zone (1-5, indicating preparation level)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hazard Context Scale:</strong></p>
+<ul>
+<li>100 = Exposure every day</li>
+<li>75 = Once a week or more</li>
+<li>50 = Once a month or more</li>
+<li>25 = Once a year or more</li>
+<li>0 = Never</li>
+</ul>
+<p><strong>Job Zone Categories:</strong></p>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="21%" />
+<col width="25%" />
+<col width="45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>Preparation Level</th>
+<th>Typical Education</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Little or None</td>
+<td>High school/GED</td>
+<td>Dishwashers, baristas</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Some</td>
+<td>High school + training</td>
+<td>Tellers, security guards</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Medium</td>
+<td>Vocational/Associate’s</td>
+<td>Electricians, barbers</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Considerable</td>
+<td>Bachelor’s degree</td>
+<td>Database admins, graphic designers</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Extensive</td>
+<td>Graduate degree</td>
+<td>Lawyers, surgeons, pharmacists</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">U.S. Department of
+Labor (2024)</span></p>
+</div>
+<div id="employment-projections-bls" class="section level3">
+<h3>Employment Projections (BLS)</h3>
+<p>U.S. Bureau of Labor Statistics employment projections for
+2024-2034.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># Load BLS projections</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>emp <span class="ot">&lt;-</span> <span class="fu">load_employment_projections</span>()</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="fu">head</span>(emp)</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a><span class="co"># Explore employment change</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>emp <span class="sc">%&gt;%</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(employment_change_24to34_percent)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>  <span class="fu">select</span>(soc2018_code, soc2018_title, </span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a>         employment_change_24to34_percent, </span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a>         median_annual_wage_2024) <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code></pre></div>
+<p><strong>Key Variables:</strong></p>
+<table>
+<colgroup>
+<col width="51%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>employment_2024_thousands</code></td>
+<td>Employment level in 2024 (thousands)</td>
+</tr>
+<tr class="even">
+<td><code>employment_2034_thousands</code></td>
+<td>Projected employment in 2034 (thousands)</td>
+</tr>
+<tr class="odd">
+<td><code>employment_change_24to34_thousands</code></td>
+<td>Absolute change 2024-2034</td>
+</tr>
+<tr class="even">
+<td><code>employment_change_24to34_percent</code></td>
+<td>Percent change 2024-2034</td>
+</tr>
+<tr class="odd">
+<td><code>median_annual_wage_2024</code></td>
+<td>Median annual wage in 2024 (top-coded at $239,200)</td>
+</tr>
+<tr class="even">
+<td><code>typical_entry_level_edu</code></td>
+<td>Typical education required</td>
+</tr>
+<tr class="odd">
+<td><code>work_experience_in_a_related_occupation</code></td>
+<td>Work experience requirements</td>
+</tr>
+<tr class="even">
+<td><code>typical_ojt</code></td>
+<td>Typical on-the-job training</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source</strong>: <span class="citation">U.S. Bureau of Labor
+Statistics (2024)</span></p>
+</div>
+</div>
+</div>
+<div id="analysis-functions" class="section level1">
+<h1>Analysis Functions</h1>
+<p>The package provides utility functions for common analytical
+tasks.</p>
+<div id="ranking-occupations" class="section level2">
+<h2>Ranking Occupations</h2>
+<p>Use <code>get_top_bottom_occupations()</code> to find the highest and
+lowest ranked occupations by any risk variable.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># Combine data</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>merged <span class="ot">&lt;-</span> <span class="fu">base_isco</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_rti</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_brownness</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co"># Get top 10 and bottom 10 by automation risk</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a>ranked <span class="ot">&lt;-</span> <span class="fu">get_top_bottom_occupations</span>(</span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>  merged,</span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a>  <span class="at">var =</span> <span class="st">&quot;rti_mihaylov_2019&quot;</span>,</span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a>  <span class="at">n =</span> <span class="dv">10</span></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a>)</span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a><span class="fu">print</span>(ranked)</span></code></pre></div>
+<p>You can also analyze rankings within major occupation groups:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># Top 3 within each 1-digit ISCO group</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>ranked_by_group <span class="ot">&lt;-</span> <span class="fu">get_top_bottom_occupations</span>(</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>  merged,</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>  <span class="at">var =</span> <span class="st">&quot;brownness&quot;</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>  <span class="at">n =</span> <span class="dv">3</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a>  <span class="at">by_group =</span> <span class="dv">1</span></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a>)</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a><span class="fu">print</span>(ranked_by_group)</span></code></pre></div>
+</div>
+<div id="summarizing-by-occupation-groups" class="section level2">
+<h2>Summarizing by Occupation Groups</h2>
+<p>Use <code>summarize_risks()</code> to calculate summary statistics by
+ISCO prefix levels.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># Summarize by 2-digit ISCO groups</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>summary_2dig <span class="ot">&lt;-</span> <span class="fu">summarize_risks</span>(</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>  merged,</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">&quot;rti_mihaylov_2019&quot;</span>, <span class="st">&quot;brownness&quot;</span>, <span class="st">&quot;greenness&quot;</span>),</span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>  <span class="at">isco_key =</span> <span class="st">&quot;isco08_code&quot;</span></span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>)</span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="fu">head</span>(summary_2dig)</span></code></pre></div>
+</div>
+<div id="looking-up-occupation-information" class="section level2">
+<h2>Looking Up Occupation Information</h2>
+<p>Use <code>lookup_isco()</code> to retrieve occupation details from
+codes.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># Look up occupation titles</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>titles <span class="ot">&lt;-</span> <span class="fu">lookup_isco</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  <span class="fu">base_isco</span>(),</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>  <span class="at">lookup_values =</span> <span class="fu">c</span>(<span class="st">&quot;1111&quot;</span>, <span class="st">&quot;2111&quot;</span>, <span class="st">&quot;3111&quot;</span>),</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  <span class="at">lookup_col =</span> <span class="st">&quot;isco08_code&quot;</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>  <span class="at">return_col =</span> <span class="st">&quot;isco08_title&quot;</span></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>)</span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a><span class="fu">print</span>(titles)</span></code></pre></div>
+</div>
+<div id="imputing-missing-values" class="section level2">
+<h2>Imputing Missing Values</h2>
+<p>Use <code>impute_by_isco()</code> to fill missing values using ISCO
+hierarchy (3-digit, then 2-digit averages).</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># Create sample data with brownness values</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">base_isco</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_brownness</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a><span class="co"># Impute missing brownness values</span></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a>imputed <span class="ot">&lt;-</span> <span class="fu">impute_by_isco</span>(</span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a>  data,</span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a>  <span class="at">var =</span> <span class="st">&quot;brownness&quot;</span>,</span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a>  <span class="at">new_var =</span> <span class="st">&quot;brownness_i&quot;</span>,</span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a>  <span class="at">isco_key =</span> <span class="st">&quot;isco08_code&quot;</span></span>
+<span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a>)</span>
+<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" tabindex="-1"></a><span class="co"># Check imputation levels</span></span>
+<span id="cb22-14"><a href="#cb22-14" tabindex="-1"></a><span class="fu">table</span>(imputed<span class="sc">$</span>brownness_i_impute_level)</span>
+<span id="cb22-15"><a href="#cb22-15" tabindex="-1"></a><span class="co"># 0 = original value, 2 = imputed from 2-digit, 3 = imputed from 3-digit</span></span></code></pre></div>
+<p>For SOC-coded data, use <code>impute_by_soc()</code> which follows
+the SOC hierarchy.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="co"># Impute missing wage values in employment projections</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>emp <span class="ot">&lt;-</span> <span class="fu">load_employment_projections</span>()</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>emp_imputed <span class="ot">&lt;-</span> <span class="fu">impute_by_soc</span>(</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>  emp,</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>  <span class="at">var =</span> <span class="st">&quot;median_annual_wage_2024&quot;</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a>  <span class="at">new_var =</span> <span class="st">&quot;wage_i&quot;</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>  <span class="at">soc_key =</span> <span class="st">&quot;soc2018_code&quot;</span></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a>)</span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a><span class="co"># Check imputation levels</span></span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a><span class="fu">table</span>(emp_imputed<span class="sc">$</span>wage_i_impute_level)</span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1"></a><span class="co"># 0 = original, 2 = from Major Group, 3 = from Minor Group, 5 = from Broad Occupation</span></span></code></pre></div>
+</div>
+</div>
+<div id="common-workflows" class="section level1">
+<h1>Common Workflows</h1>
+<div id="workflow-1-analyzing-automation-risk-by-sector" class="section level2">
+<h2>Workflow 1: Analyzing Automation Risk by Sector</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># Load and merge data</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">base_isco</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_rti</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="co"># Add 1-digit major group</span></span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">major_group =</span> <span class="fu">substr</span>(isco08_code, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co"># Summarize by major group</span></span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a>  <span class="fu">group_by</span>(major_group) <span class="sc">%&gt;%</span></span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a>    <span class="at">mean_rti =</span> <span class="fu">mean</span>(rti_mihaylov_2019, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a>    <span class="at">sd_rti =</span> <span class="fu">sd</span>(rti_mihaylov_2019, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>()</span>
+<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(mean_rti))</span></code></pre></div>
+</div>
+<div id="workflow-2-identifying-at-risk-occupations" class="section level2">
+<h2>Workflow 2: Identifying At-Risk Occupations</h2>
+<p>Find occupations with high automation risk AND high brownness (double
+jeopardy):</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># Load and merge</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">base_isco</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_rti</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">load_brownness</span>(), <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co"># Calculate percentiles</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>    <span class="at">rti_pctl =</span> <span class="fu">percent_rank</span>(rti_mihaylov_2019) <span class="sc">*</span> <span class="dv">100</span>,</span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a>    <span class="at">brown_pctl =</span> <span class="fu">percent_rank</span>(brownness) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>  )</span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co"># Find double jeopardy occupations (top 30% on both)</span></span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a>double_risk <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a>  <span class="fu">filter</span>(rti_pctl <span class="sc">&gt;=</span> <span class="dv">70</span> <span class="sc">&amp;</span> brown_pctl <span class="sc">&gt;=</span> <span class="dv">70</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(rti_pctl <span class="sc">+</span> brown_pctl)) <span class="sc">%&gt;%</span></span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a>  <span class="fu">select</span>(isco08_code, isco08_title, rti_mihaylov_2019, brownness, </span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a>         rti_pctl, brown_pctl)</span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a><span class="fu">head</span>(double_risk, <span class="dv">15</span>)</span></code></pre></div>
+</div>
+<div id="workflow-3-cross-country-comparison" class="section level2">
+<h2>Workflow 3: Cross-Country Comparison</h2>
+<p>Using country-specific skill specificity data:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># Load country-level data</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>ss <span class="ot">&lt;-</span> <span class="fu">load_skill_specificity</span>(<span class="at">aggregate =</span> <span class="st">&quot;none&quot;</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="co"># Compare skill specificity across countries</span></span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>country_summary <span class="ot">&lt;-</span> ss <span class="sc">%&gt;%</span></span>
+<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">%&gt;%</span></span>
+<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb26-8"><a href="#cb26-8" tabindex="-1"></a>    <span class="at">mean_ss =</span> <span class="fu">mean</span>(skill_specificity, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-9"><a href="#cb26-9" tabindex="-1"></a>    <span class="at">median_ss =</span> <span class="fu">median</span>(skill_specificity, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb26-10"><a href="#cb26-10" tabindex="-1"></a>    <span class="at">n_occupations =</span> <span class="fu">n_distinct</span>(isco88_code)</span>
+<span id="cb26-11"><a href="#cb26-11" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-12"><a href="#cb26-12" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(mean_ss))</span>
+<span id="cb26-13"><a href="#cb26-13" tabindex="-1"></a></span>
+<span id="cb26-14"><a href="#cb26-14" tabindex="-1"></a><span class="fu">head</span>(country_summary)</span></code></pre></div>
+</div>
+<div id="workflow-4-bridging-isco-88-to-isco-08" class="section level2">
+<h2>Workflow 4: Bridging ISCO-88 to ISCO-08</h2>
+<p>When working with data in different classification systems:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># Load ISCO-88 data (skill specificity)</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>ss <span class="ot">&lt;-</span> <span class="fu">load_skill_specificity</span>(<span class="at">aggregate =</span> <span class="st">&quot;by_isco&quot;</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a><span class="co"># Load crosswalk</span></span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>xwalk <span class="ot">&lt;-</span> <span class="fu">crosswalk_isco_88_08</span>()</span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a><span class="co"># Bridge to ISCO-08</span></span>
+<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>ss_isco08 <span class="ot">&lt;-</span> ss <span class="sc">%&gt;%</span></span>
+<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>  <span class="fu">left_join</span>(xwalk, <span class="at">by =</span> <span class="st">&quot;isco88_code&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>  <span class="co"># Handle many-to-many by taking mean</span></span>
+<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>  <span class="fu">group_by</span>(isco08_code) <span class="sc">%&gt;%</span></span>
+<span id="cb27-12"><a href="#cb27-12" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">skill_specificity =</span> <span class="fu">mean</span>(skill_specificity, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb27-13"><a href="#cb27-13" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="#cb27-14" tabindex="-1"></a><span class="co"># Now merge with ISCO-08 data</span></span>
+<span id="cb27-15"><a href="#cb27-15" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">base_isco</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb27-16"><a href="#cb27-16" tabindex="-1"></a>  <span class="fu">left_join</span>(ss_isco08, <span class="at">by =</span> <span class="st">&quot;isco08_code&quot;</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="function-reference" class="section level1">
+<h1>Function Reference</h1>
+<div id="data-loaders" class="section level2">
+<h2>Data Loaders</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="38%" />
+<col width="43%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>base_isco()</code></td>
+<td>ISCO-08 baseline (427 codes)</td>
+<td>ISCO-08</td>
+</tr>
+<tr class="even">
+<td><code>base_isco_detail()</code></td>
+<td>Full ISCO-08 structure with definitions</td>
+<td>ISCO-08</td>
+</tr>
+<tr class="odd">
+<td><code>base_soc()</code></td>
+<td>SOC 2018 occupations (867 codes)</td>
+<td>SOC 2018</td>
+</tr>
+<tr class="even">
+<td><code>load_rti()</code></td>
+<td>Routine Task Intensity</td>
+<td>ISCO-08</td>
+</tr>
+<tr class="odd">
+<td><code>load_aioe()</code></td>
+<td>AI Occupational Exposure</td>
+<td>SOC 2018</td>
+</tr>
+<tr class="even">
+<td><code>load_computerization()</code></td>
+<td>Computerization probability</td>
+<td>SOC 2010</td>
+</tr>
+<tr class="odd">
+<td><code>load_offshorability()</code></td>
+<td>Offshorability index</td>
+<td>SOC 2010</td>
+</tr>
+<tr class="even">
+<td><code>load_mahutga()</code></td>
+<td>RTI/Offshorability (country-year)</td>
+<td>ISCO-88</td>
+</tr>
+<tr class="odd">
+<td><code>load_skill_specificity()</code></td>
+<td>Skill specificity (country-year)</td>
+<td>ISCO-88</td>
+</tr>
+<tr class="even">
+<td><code>load_brownness()</code></td>
+<td>Greenness/Brownness (Cavallotti et al.)</td>
+<td>ISCO-08</td>
+</tr>
+<tr class="odd">
+<td><code>load_scholl_green_brown()</code></td>
+<td>Greenness/Brownness (Scholl et al. 2023)</td>
+<td>ISCO-08</td>
+</tr>
+<tr class="even">
+<td><code>load_prestige()</code></td>
+<td>Occupational prestige</td>
+<td>SOC 2018</td>
+</tr>
+<tr class="odd">
+<td><code>load_hazard()</code></td>
+<td>Hazardous conditions</td>
+<td>SOC 2018</td>
+</tr>
+<tr class="even">
+<td><code>load_employment_projections()</code></td>
+<td>BLS 2024-34 projections</td>
+<td>SOC 2018</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="crosswalks-1" class="section level2">
+<h2>Crosswalks</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>crosswalk_isco_88_08()</code></td>
+<td>ISCO-88 to ISCO-08</td>
+</tr>
+<tr class="even">
+<td><code>crosswalk_isco_08_soc_10()</code></td>
+<td>ISCO-08 to SOC 2010</td>
+</tr>
+<tr class="odd">
+<td><code>crosswalk_soc_10_18()</code></td>
+<td>SOC 2010 to SOC 2018</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="analysis-utilities" class="section level2">
+<h2>Analysis Utilities</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>get_top_bottom_occupations()</code></td>
+<td>Rank occupations by variable</td>
+</tr>
+<tr class="even">
+<td><code>summarize_risks()</code></td>
+<td>Summary stats by ISCO prefix</td>
+</tr>
+<tr class="odd">
+<td><code>lookup_isco()</code></td>
+<td>Look up occupation information</td>
+</tr>
+<tr class="even">
+<td><code>impute_by_isco()</code></td>
+<td>Impute missing values by ISCO hierarchy</td>
+</tr>
+<tr class="odd">
+<td><code>impute_by_soc()</code></td>
+<td>Impute missing values by SOC hierarchy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="citation" class="section level1">
+<h1>Citation</h1>
+<p>If you use this package in your research, please cite the original
+data sources as indicated by each loader function, as well as the
+package itself:</p>
+<pre><code>@Manual{occupationRiskPack,
+  title = {occupationRiskPack: Occupation-Level Risk Data for Research},
+  author = {Jaewook Lee},
+  year = {2026},
+  note = {R package version 0.1.0},
+  url = {https://github.com/jwklee/occupationRiskPack}
+}</code></pre>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-blinder2007many" class="csl-entry">
+Blinder AS (2007) How many US jobs might be offshorable? <em>CEPS
+Working Paper</em> (142). Princeton University. Epub ahead of print
+2007.
+</div>
+<div id="ref-cavallotti2025green" class="csl-entry">
+Cavallotti E, Colantone I, Stanig P, et al. (2025) <em>Green collars at
+the voting booth: Material interest and environmental voting</em>.
+Working Paper.
+</div>
+<div id="ref-felten2021occupational" class="csl-entry">
+Felten E, Raj M and Seamans R (2021) Occupational, industry, and
+geographic exposure to artificial intelligence: A novel dataset and its
+potential uses. <em>Strategic Management Journal</em> 42(12). Wiley:
+2195–2217.
+</div>
+<div id="ref-frey2017future" class="csl-entry">
+Frey CB and Osborne MA (2017) The future of employment: How susceptible
+are jobs to computerisation? <em>Technological Forecasting and Social
+Change</em> 114. Elsevier: 254–280.
+</div>
+<div id="ref-hughes2024occupational" class="csl-entry">
+Hughes BT, Srivastava S, Leszko M, et al. (2024) Occupational prestige:
+The status component of socioeconomic status. <em>Collabra:
+Psychology</em> 10(1): 92882.
+</div>
+<div id="ref-mahutga2018job" class="csl-entry">
+Mahutga MC, Curran M and Roberts A (2018) Job tasks and the comparative
+structure of income and employment: Routine task intensity and
+offshorability for the LIS. <em>International Journal of Comparative
+Sociology</em> 59(2). SAGE Publications Sage UK: London, England:
+81–109.
+</div>
+<div id="ref-mihaylov2019measuring" class="csl-entry">
+Mihaylov E and Tijdens KG (2019) Measuring the routine and non-routine
+task content of 427 four-digit ISCO-08 occupations. Tinbergen Institute
+Discussion Paper 2019-035/V. Epub ahead of print 2019.
+</div>
+<div id="ref-pardos2019skill" class="csl-entry">
+Pardos-Prado S and Xena C (2019) Skill specificity and attitudes toward
+immigration. <em>American Journal of Political Science</em> 63(2).
+Wiley: 286–304.
+</div>
+<div id="ref-scholl2023green" class="csl-entry">
+Scholl N, Turban S and Gal PN (2023) <em>The green side of productivity:
+An international classification of green and brown occupations</em>. 33,
+OECD Productivity Working Papers. OECD Publishing. Available at: <a href="https://www.oecd.org/industry/productivity/">https://www.oecd.org/industry/productivity/</a>.
+</div>
+<div id="ref-bls2024projections" class="csl-entry">
+U.S. Bureau of Labor Statistics (2024) Employment projections: 2024-34.
+<a href="https://data.bls.gov/projections/occupationProj" class="uri">https://data.bls.gov/projections/occupationProj</a>.
+</div>
+<div id="ref-onet2024" class="csl-entry">
+U.S. Department of Labor (2024) O*NET OnLine. <a href="https://www.onetonline.org/" class="uri">https://www.onetonline.org/</a>.
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

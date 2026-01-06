@@ -22,7 +22,7 @@
 
 # Documentation
 /docs/
-/inst/doc/
+# /inst# /doc/ - keep for vignettes
 
 # Backup files
 *~
@@ -45,3 +45,5 @@ data-raw/sources/
 # Credentials (never commit)
 .Renviron
 .httr-oauth
+# /doc/
+# /Meta/
