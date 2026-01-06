@@ -6,17 +6,15 @@
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-An R package for analyzing occupational risk variables at the ISCO-08 4-digit level. Combine and analyze automation risk (RTI), environmental exposure (greenness/brownness), and other occupation-level variables with ease.
+A unified R package for accessing and analyzing occupation-level risk variables commonly used in labor economics, political economy, and sociological research. The package consolidates data from multiple authoritative sources into a consistent framework built around standardized occupation classification systems.
 
-## Features
+## Key Features
 
-✨ **Simple API**: Load, merge, and analyze occupation-level risk variables with just a few functions
-
-📊 **Complete Data**: Pre-packaged occupation reference and risk variables keyed to ISCO-08 4-digit codes
-
-🔍 **Flexible Analysis**: Rank occupations, lookup codes ↔ titles, compute aggregated statistics, and impute missing values
-
-🎯 **ISCO-08 Based**: Everything is organized around the standardized ISCO-08 4-digit classification for occupations
+- **Standardized occupation codes**: All data organized by ISCO-08 or SOC 2018 codes
+- **Multiple risk dimensions**: Automation risk, offshorability, skill specificity, AI exposure, environmental transition exposure, and more
+- **Cross-classification support**: Crosswalks between ISCO-88, ISCO-08, SOC 2010, and SOC 2018
+- **Analysis utilities**: Functions for ranking occupations, summarizing by groups, and imputing missing values
+- **Proper citations**: Each data loader displays source information to facilitate attribution
 
 ## Installation
 
@@ -37,227 +35,143 @@ devtools::install_github("jwklee/occupationRiskPack")
 
 ```r
 library(occupationRiskPack)
+library(dplyr)
 
-# Load all risk variables merged together
-merged <- merge_occup_risks()
-
-# Find top occupations by automation risk
-top_rti <- get_top_bottom_occupations(
-  merged, 
-  var = "rti_mihaylov_2019", 
-  n = 15
-)
-
-# 3. Add occupation titles for reference
+# Load ISCO-08 baseline table (427 4-digit codes)
 isco <- base_isco()
-titles <- lookup_isco(
-  isco,
-  lookup_values = top_rti$isco08_code,
-  lookup_col = "isco08_code",
-  return_col = "isco08_title"
-)
 
-# Combine and display
-result <- merge(top_rti, titles, by = "isco08_code")
-print(result)
+# Load routine task intensity data
+rti <- load_rti()
+
+# Merge and analyze
+data <- isco %>%
+  left_join(rti, by = "isco08_code")
+
+# Find top 10 occupations by automation risk
+get_top_bottom_occupations(data, var = "rti_mihaylov_2019", n = 10)
 ```
 
-## Main Functions
+## Available Data Loaders
 
-### Data Loading
+### Classification Systems
 
-- **`base_isco()`**: Load ISCO-08 baseline reference table with codes and titles
-- **`load_rti()`**: Load routine task intensity (automation risk) data
-- **`load_brownness()`**: Load greenness/brownness (environmental exposure) data
-- **`merge_occup_risks()`**: Merge all risk variables into a single dataset
+| Function | Description | Classification |
+|----------|-------------|----------------|
+| `base_isco()` | ISCO-08 occupations (427 codes) | ISCO-08 |
+| `base_isco_detail()` | ISCO-08 with ILO definitions | ISCO-08 |
+| `base_soc()` | SOC 2018 occupations (867 codes) | SOC 2018 |
 
-### Analysis
+### Risk Variables
 
-- **`get_top_bottom_occupations()`**: Rank occupations by risk variable, optionally grouped by ISCO prefix level
-- **`lookup_isco()`**: Quick lookup between ISCO codes and occupation titles (bidirectional, case-insensitive)
-- **`summarize_risks()`**: Compute summary statistics (mean, SD, missing %) by ISCO aggregation level
-- **`impute_by_isco()`**: Fill missing values using hierarchical ISCO group means
+| Function | Description | Source |
+|----------|-------------|--------|
+| `load_rti()` | Routine Task Intensity | Mihaylov et al. (2019) |
+| `load_aioe()` | AI Occupational Exposure | Felten et al. (2021) |
+| `load_computerization()` | Computerization probability | Frey & Osborne (2017) |
+| `load_offshorability()` | Offshorability index | Blinder (2007) |
+| `load_mahutga()` | RTI & Offshorability by country | Mahutga et al. (2018) |
+| `load_skill_specificity()` | Skill specificity | Pardos-Prado & Xena (2019) |
+| `load_brownness()` | Greenness/Brownness exposure | Cavallotti et al. (2025) |
+| `load_scholl_green_brown()` | Green/Brown/Grey occupations | Scholl et al. (2023) |
+| `load_prestige()` | Occupational prestige | Hughes et al. (2024) |
+| `load_hazard()` | Hazardous working conditions | O*NET |
+| `load_employment_projections()` | Employment projections | BLS |
+
+### Crosswalks
+
+| Function | Description |
+|----------|-------------|
+| `crosswalk_isco_88_08()` | ISCO-88 to ISCO-08 |
+| `crosswalk_soc_10_18()` | SOC 2010 to SOC 2018 |
+| `crosswalk_isco_08_soc_10()` | ISCO-08 to SOC 2010 |
+
+### Analysis Functions
+
+| Function | Description |
+|----------|-------------|
+| `get_top_bottom_occupations()` | Rank occupations by variable |
+| `summarize_risks()` | Summary stats by ISCO/SOC prefix |
+| `lookup_isco()` | Look up occupation information |
+| `impute_by_isco()` | Impute missing values by ISCO hierarchy |
+| `impute_by_soc()` | Impute missing values by SOC hierarchy |
+
+## Example Workflows
+
+### Analyzing Automation Risk
+
+```r
+library(occupationRiskPack)
+library(dplyr)
+
+# Load and merge data
+data <- base_isco() %>%
+  left_join(load_rti(), by = "isco08_code") %>%
+  mutate(major_group = substr(isco08_code, 1, 1))
+
+# Summarize by major group
+data %>%
+  group_by(major_group) %>%
+  summarize(
+    mean_rti = mean(rti_mihaylov_2019, na.rm = TRUE),
+    n = n()
+  )
+```
+
+### Working with SOC Data
+
+```r
+# Load SOC-based computerization data
+comp <- load_computerization()
+
+# Crosswalk to SOC 2018
+soc_xwalk <- crosswalk_soc_10_18()
+comp_2018 <- comp %>%
+  left_join(soc_xwalk, by = c("soc2010_code" = "soc2010_code"))
+```
+
+### Imputing Missing Values
+
+```r
+# Create sample data with brownness values
+data <- base_isco() %>%
+  left_join(load_brownness(), by = "isco08_code")
+
+# Impute missing brownness values using ISCO hierarchy
+imputed <- impute_by_isco(
+  data,
+  var = "brownness",
+  new_var = "brownness_i",
+  isco_key = "isco08_code"
+)
+```
 
 ## Documentation
 
-### Get Started
-
-📖 **[USAGE_GUIDE.md](USAGE_GUIDE.md)** - Comprehensive guide with examples for all functions
-
-📚 **[Getting Started Vignette](vignettes/getting_started.Rmd)** - R Markdown vignette showing complete workflows
-
-### Reference
-
-🔧 **[PACKAGE_DEVELOPMENT.md](PACKAGE_DEVELOPMENT.md)** - Technical documentation for developers
-
-📋 **[README.dev.md](README.dev.md)** - Developer setup and testing instructions
-
-### Examples in R
+For comprehensive documentation with detailed examples, see the package vignette:
 
 ```r
-# Function-specific help
-?load_isco
-?get_top_bottom_occupations
-?lookup_isco
-?summarize_risks
-?impute_by_isco
-
-# Or browse the USAGE_GUIDE
-# vignette("getting_started", package = "occupationRiskPack")
+vignette("occupationRiskPack")
 ```
 
-## Common Use Cases
+## Data Sources
 
-### Find High-Risk Occupations
+All data sources are documented in `inst/COPYRIGHTS`. The package includes data from:
 
-```r
-merged <- merge_occup_risks()
-
-# Top 20 by automation risk
-top_rti <- get_top_bottom_occupations(merged, var = "rti_mihaylov_2019", n = 20)
-```
-
-### Compare Risk Across ISCO Groups
-
-```r
-# Top/bottom 10 occupations by major ISCO group (1-digit)
-by_major <- get_top_bottom_occupations(
-  merged, 
-  var = "greenness", 
-  n = 10, 
-  by_group = 1
-)
-```
-
-### Batch Code ↔ Title Lookups
-
-```r
-isco <- base_isco()
-
-# Look up titles for codes
-lookup_isco(
-  isco,
-  lookup_values = c("1111", "2111", "3323"),
-  lookup_col = "isco08_code",
-  return_col = "isco08_title"
-)
-
-# Or codes for titles (case-insensitive)
-lookup_isco(
-  isco,
-  lookup_values = c("engineers", "legislators"),
-  lookup_col = "isco08_title",
-  return_col = "isco08_code"
-)
-```
-
-### Combine with Your Own Data
-
-```r
-my_data <- data.frame(
-  isco08_code = c("1111", "2111"),
-  employees = c(100, 50),
-  wage = c(80000, 95000)
-)
-
-merged <- merge_occup_risks()
-result <- merge(my_data, merged, by = "isco08_code")
-```
-
-### Aggregated Statistics by ISCO Level
-
-```r
-# Summary by 2-digit ISCO groups
-summary_2dig <- summarize_risks(
-  merged,
-  vars = c("rti_mihaylov_2019", "greenness"),
-  by_level = 2
-)
-```
-
-## Data Overview
-
-The package includes:
-
-- **427 ISCO-08 4-digit occupations** with standardized titles
-- **RTI (Routine Task Intensity)** from Mihaylov (2019) - measures automation risk
-- **Greenness & Brownness** - measures environmental exposure for post-carbon transition
-
-All data is keyed by `isco08_code` (4-digit ISCO code as character) for easy combining and merging.
-
-## Package Structure
-
-```
-occupationRiskPack/
-├── R/
-│   ├── loaders.R              # Data loading functions
-│   ├── merge_core_api.R       # Merge function
-│   ├── summarize.R            # Aggregation statistics
-│   ├── impute.R               # Imputation functions
-│   └── utils_analysis.R       # Analysis helpers
-├── inst/extdata/              # Data files (source_*.csv)
-├── tests/testthat/            # Unit tests
-├── vignettes/
-│   └── getting_started.Rmd    # Getting started guide
-├── USAGE_GUIDE.md             # Detailed usage guide
-├── PACKAGE_DEVELOPMENT.md     # Technical design docs
-└── README.md                  # This file
-```
-
-## Development
-
-### Running Tests
-
-```r
-# Run all tests
-devtools::test()
-
-# Run tests for specific function
-devtools::test(filter = "lookup_isco")
-```
-
-### Regenerate Documentation
-
-```r
-# Update man pages and NAMESPACE from roxygen comments
-devtools::document()
-```
-
-### Check Package
-
-```r
-# Run R CMD check
-devtools::check()
-```
-
-For more development info, see [README.dev.md](README.dev.md).
-
-## Contributing
-
-Bugs? Ideas? Questions?
-
-- Check [PACKAGE_DEVELOPMENT.md](PACKAGE_DEVELOPMENT.md) for technical details
-- Review [USAGE_GUIDE.md](USAGE_GUIDE.md) for examples
-- Look at test files in `tests/testthat/` for additional usage patterns
-
-## License
-
-TBD
+- International Labour Organization (ILO)
+- U.S. Bureau of Labor Statistics (BLS)
+- O*NET OnLine
+- OECD Working Papers
+- Academic publications (properly cited)
 
 ## Citation
 
 If you use this package in research, please cite:
 
 ```
-TBD
+Lee, J. (2025). occupationRiskPack: Occupation-Level Risk Data for Labor Market Research. 
+R package version 0.1.0. https://github.com/jwklee/occupationRiskPack
 ```
 
-## Acknowledgments
+## License
 
-- ISCO-08 occupation data
-- RTI measure from Mihaylov (2019)
-- Greenness/brownness data from [source TBD]
-
----
-
-**Get started**: Read [USAGE_GUIDE.md](USAGE_GUIDE.md) or run `vignette("getting_started")` to see examples!
+MIT License. See LICENSE file for details.
