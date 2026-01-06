@@ -10,7 +10,7 @@ Description: Provides standardized occupation-level risk measures for labor
     market research, including automation risk (routine task intensity), 
     offshorability, skill specificity, AI exposure, computerization probability, 
     environmental transition exposure (greenness/brownness), occupational prestige, 
-    and hazardous working conditions. Supports both ISCO-08 (International Standard 
+    and hazardous working conditions. Supports both ISCO (International Standard 
     Classification of Occupations) and SOC (Standard Occupational Classification) 
     coding systems with crosswalks for bridging between classifications.
 License: MIT + file LICENSE
