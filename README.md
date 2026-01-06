@@ -10,7 +10,7 @@ A unified R package for accessing and analyzing occupation-level risk variables 
 
 ## Key Features
 
-- **Standardized occupation codes**: All data organized by ISCO-08 or SOC 2018 codes
+- **Standardized occupation codes**: All data organized by ISCO or SOC codes
 - **Multiple risk dimensions**: Automation risk, offshorability, skill specificity, AI exposure, environmental transition exposure, and more
 - **Cross-classification support**: Crosswalks between ISCO-88, ISCO-08, SOC 2010, and SOC 2018
 - **Analysis utilities**: Functions for ranking occupations, summarizing by groups, and imputing missing values
@@ -90,7 +90,7 @@ get_top_bottom_occupations(data, var = "rti_mihaylov_2019", n = 10)
 | Function | Description |
 |----------|-------------|
 | `get_top_bottom_occupations()` | Rank occupations by variable |
-| `summarize_risks()` | Summary stats by ISCO/SOC prefix |
+| `summarize_risks()` | Summary stats by ISCO prefix |
 | `lookup_isco()` | Look up occupation information |
 | `impute_by_isco()` | Impute missing values by ISCO hierarchy |
 | `impute_by_soc()` | Impute missing values by SOC hierarchy |
