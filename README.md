@@ -47,7 +47,7 @@ rti <- load_rti()
 data <- isco %>%
   left_join(rti, by = "isco08_code")
 
-# Find top 10 occupations by automation risk
+# Find top/bottom 10 occupations by automation risk
 get_top_bottom_occupations(data, var = "rti_mihaylov_2019", n = 10)
 ```
 
@@ -160,8 +160,7 @@ All data sources are documented in `inst/COPYRIGHTS`. The package includes data 
 - International Labour Organization (ILO)
 - U.S. Bureau of Labor Statistics (BLS)
 - O*NET OnLine
-- OECD Working Papers
-- Academic publications (properly cited)
+- Academic publications
 
 ## Citation
 
